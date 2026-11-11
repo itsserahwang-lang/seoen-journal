@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en" data-mode="en">
+<head>
+<meta charset="utf-8">
+<meta name="theme-color" content="#141619">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SEOEN Journal · Daily Beauty Briefing</title>
+<meta name="description" content="K-뷰티, 웰니스 호텔, 스킨케어, 뷰티 마케팅 소식을 매일 아침 영어 요약과 한국어 번역으로 전하는 데일리 뷰티 브리핑.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Noto+Color+Emoji&family=Inter+Tight:wght@300;500;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap">
+<style>
+/* Layout: single 680px editorial column of stacked cards, magazine masthead on top, black ground, white sans */
+:root{
+  --bg:#0E0E0E; --card:#181818; --line:#2A2A2A; --fg:#F5F5F3; --muted:#9C9A95; --accent:#CDB58A;
+  --display:"Inter Tight","Noto Sans KR",system-ui,sans-serif;
+  --body:"Noto Sans KR","Inter Tight",system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.7;margin:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 64px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:56px}
+a{color:var(--fg);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+a:hover,a:focus-visible{text-decoration-color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* masthead */
+.mast{border-bottom:1px solid var(--fg);padding-bottom:28px;display:flex;flex-direction:column;gap:14px}
+.mast .top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--display);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.mast h1{font-family:var(--display);font-weight:800;font-size:clamp(44px,11vw,84px);line-height:.92;letter-spacing:-.035em;margin:0;text-wrap:balance}
+.mast h1 span{font-weight:300}
+.mast p{margin:0;color:var(--muted);font-size:14px}
+
+/* section */
+section{display:flex;flex-direction:column;gap:16px}
+.sh{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:14px}
+.sh h2{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin:0}
+.sh small{font-size:12px;color:var(--muted)}
+
+/* cards */
+.card{background:var(--card);border-radius:4px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.meta{font-family:var(--display);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.card h3{font-family:var(--display);font-weight:700;font-size:20px;line-height:1.25;letter-spacing:-.01em;margin:0;text-wrap:balance}
+.card p{margin:0}
+.en{color:var(--fg);font-weight:300}
+.ko{color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:10px}
+.ko b{color:var(--accent);font-weight:500;margin-right:6px}
+.empty{color:var(--muted);font-size:14px;padding:4px 0}
+
+/* top 3 */
+.top3{display:flex;flex-direction:column}
+.t{display:grid;grid-template-columns:56px 1fr;gap:16px;padding-block:22px;border-bottom:1px solid var(--line)}
+.t:last-child{border-bottom:0}
+.t .n{font-family:var(--display);font-weight:800;font-size:44px;line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
+.t div{min-width:0;display:flex;flex-direction:column;gap:8px}
+.t h3{font-family:var(--display);font-weight:700;font-size:21px;line-height:1.25;margin:0;text-wrap:balance}
+.t p{margin:0}
+
+/* insight */
+.ins{display:flex;flex-direction:column;gap:2px}
+.ins .row{padding-block:16px;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+.ins .row:last-child{border-bottom:0}
+.ins h3{font-family:var(--display);font-size:17px;font-weight:700;margin:0}
+
+/* english corner */
+.words{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.w .term{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.01em}
+.w .pos{font-size:12px;color:var(--muted);margin-left:6px;font-weight:400}
+.w .kr{color:var(--accent);font-size:14px}
+.w .ex{font-style:italic;font-weight:300}
+.cap{font-family:var(--display);font-weight:300;font-size:22px;line-height:1.4;letter-spacing:-.01em;margin:0}
+blockquote{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(26px,6vw,36px);line-height:1.15;letter-spacing:-.02em}
+.bd{display:flex;flex-direction:column;gap:8px;font-size:14px}
+.bd dt{font-family:var(--display);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.bd dd{margin:0 0 6px}
+.src{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:13px}
+.src li{color:var(--muted)}
+footer{font-size:12px;color:var(--muted);text-align:left;border-top:1px solid var(--fg);padding-top:16px;font-family:var(--display);letter-spacing:.12em;text-transform:uppercase}
+@media (max-width:420px){.card{padding:18px}.t{grid-template-columns:40px 1fr}.t .n{font-size:34px}}
+
+.read{align-self:flex-start;font-family:var(--display);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--fg);text-decoration:none;border-bottom:1px solid var(--accent);padding-bottom:2px}
+.read:hover,.read:focus-visible{color:var(--accent)}
+/* language modes */
+.l-ko,.kot{display:none}
+[data-mode="ko"] .l-en{display:none}[data-mode="ko"] .l-ko{display:inline}[data-mode="ko"] h3.l-ko,[data-mode="ko"] p.l-ko{display:block}
+[data-mode="ko"] .sum .en{display:none}[data-mode="ko"] .kot{display:block;color:var(--fg);font-weight:400}
+[data-mode="both"] .kot{display:block;color:var(--fg);font-weight:400;font-size:14px}
+[data-mode="both"] .sum{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+[data-mode="both"] .sum p{min-width:0}
+body{word-break:keep-all;overflow-wrap:anywhere}
+.sum{display:flex;flex-direction:column;gap:8px}.sum p{margin:0}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:12px;display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line);margin-block:-28px -28px}
+.bar .lbl{font-family:var(--display);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px}
+.toggle button{font:inherit;font-family:var(--display);font-size:12px;letter-spacing:.14em;padding:6px 14px;border-radius:999px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--fg);color:var(--bg);font-weight:700}
+/* magazine cards with cover */
+.cards{display:flex;flex-direction:column;gap:16px}
+.card{padding:0;overflow:hidden;gap:0}
+.card .body{padding:20px 22px 20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.th{aspect-ratio:16/9;position:relative;overflow:hidden;max-width:100%;
+ background:radial-gradient(circle at var(--x1) var(--y1),rgba(var(--c1),.85) 0 16%,transparent 42%),radial-gradient(circle at var(--x2) var(--y2),rgba(var(--c2),.7) 0 13%,transparent 38%),linear-gradient(135deg,#1a1a1a,#0b0b0b)}
+.th::before{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(245,245,243,.16)}
+.th::after{content:"";position:absolute;width:38%;aspect-ratio:1;left:calc(var(--x1) - 19%);top:12%;border:1px solid rgba(245,245,243,.32);border-radius:50%}
+.th .ov{position:absolute;inset:0;padding:22px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;background:linear-gradient(to top,rgba(0,0,0,.72),transparent 62%);z-index:2}
+.th .src{font-family:var(--display);font-size:10px;letter-spacing:.24em;color:var(--accent)}
+.th .kw{font-family:var(--display);font-weight:800;font-size:clamp(26px,6vw,40px);line-height:1;letter-spacing:-.025em;color:#F5F5F3}
+@media (min-width:640px){.card{display:grid;grid-template-columns:42% 1fr}.th{aspect-ratio:auto;min-height:100%}.th .kw{font-size:28px}}
+@media (max-width:560px){[data-mode="both"] .sum{grid-template-columns:1fr}}
+
+.tabs{position:sticky;top:calc(env(safe-area-inset-top,0px) + 58px);z-index:4;background:var(--bg);border-bottom:1px solid var(--line);margin-top:-36px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs-in{display:flex;gap:22px;white-space:nowrap;padding-block:12px}
+.tabs a{font-family:var(--display);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding-bottom:4px;border-bottom:2px solid transparent}
+.tabs a[aria-current="page"]{color:var(--fg);border-bottom-color:var(--accent)}
+#panels{display:block}.panel{display:flex;flex-direction:column;gap:56px}.panel[hidden]{display:none}
+th,td{overflow-wrap:normal;word-break:keep-all}th{white-space:nowrap}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:4px}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px}
+th{background:var(--card);text-align:left;font-family:var(--display);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:500;padding:12px 14px}
+td{padding:12px 14px;border-top:1px solid var(--line);font-variant-numeric:tabular-nums;vertical-align:top}
+td:nth-child(2){font-family:var(--display);font-weight:700;white-space:nowrap}
+.note{font-size:13px;color:var(--muted);margin:0}
+.lead{margin:0;font-size:16px;font-weight:300}
+[data-mode="ko"] .lead,[data-mode="ko"] .note{font-weight:400}
+.sh.sub h2{font-size:12px}
+.links{display:flex;flex-wrap:wrap;gap:12px 20px}
+.disc{border:1px solid var(--accent);padding:14px 16px;border-radius:4px;font-size:14px;color:var(--fg)}
+.badge{align-self:flex-start;font-family:var(--display);font-size:10px;font-weight:700;letter-spacing:.16em;padding:4px 8px;border-radius:2px;margin-bottom:4px}
+.b-odm{background:var(--accent);color:#141414}.b-oem{background:#F5F5F3;color:#141414}.b-raw{background:#B3263A;color:#F5F5F3}
+.legend{display:flex;flex-direction:column;gap:10px;background:var(--card);padding:18px;border-radius:4px;font-size:14px}
+.legend p{margin:0;display:flex;gap:10px;align-items:baseline}.legend .badge{margin:0;flex:none}
+[data-mode="both"] .lead .l-ko,[data-mode="both"] .note .l-ko,[data-mode="both"] .disc .l-ko,[data-mode="both"] .legend .l-ko,[data-mode="both"] .ko .l-ko,[data-mode="both"] .empty .l-ko{display:block;color:var(--muted);margin-top:4px}
+[data-mode="both"] .ko .l-ko{display:none}
+
+.issues{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
+.issue{display:flex;flex-direction:column;gap:10px;background:var(--card);border-radius:4px;padding:20px;text-decoration:none;min-width:0}
+.issue:hover,.issue:focus-visible{background:#222}
+.issue .d{font-family:var(--display);font-weight:800;font-size:40px;line-height:1;font-variant-numeric:tabular-nums}
+.issue .m{font-family:var(--display);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.issue .h{font-size:14px;color:var(--muted);line-height:1.5}
+.pager{display:flex;justify-content:space-between;gap:12px;font-family:var(--display);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.pager a{color:var(--muted);text-decoration:none}.pager a:hover{color:var(--fg)}
+.mom{display:flex;flex-direction:column;gap:16px}
+.brand{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent)}
+.brand::after{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#FF3D8B;margin-left:10px;vertical-align:middle}
+
+[hidden]{display:none!important}
+/* multi-language */
+.l-fr,.l-zh,.l-ja{display:none}
+[data-mode="fr"] .l-en:not(.keep),[data-mode="zh"] .l-en:not(.keep),[data-mode="ja"] .l-en:not(.keep){display:none}
+[data-mode="fr"] .l-fr,[data-mode="zh"] .l-zh,[data-mode="ja"] .l-ja{display:revert}
+[data-mode="fr"] .l-en.keep,[data-mode="zh"] .l-en.keep,[data-mode="ja"] .l-en.keep{display:revert}
+[lang="zh"]{font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",var(--body)}
+[lang="ja"],[lang="zh"]{word-break:normal;line-break:strict}
+[lang="ja"]{font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",var(--body)}
+.toggle{flex-wrap:nowrap;overflow-x:auto;max-width:100%;scrollbar-width:none}.toggle::-webkit-scrollbar{display:none}
+.toggle button{padding:6px 11px;white-space:nowrap}
+@media (max-width:560px){.bar .lbl{display:none}.bar{justify-content:flex-start}}
+.tabs a.t-brand{color:var(--accent);font-weight:700}
+/* magazine chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:inherit;font-family:var(--display);font-size:12px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:7px 14px;cursor:pointer}
+.chips button[aria-pressed="true"]{border-color:var(--accent);color:var(--fg)}
+/* SEOEN brand */
+.hero-s{align-items:center;text-align:center;gap:14px;padding-block:20px 8px}
+.concept{font-family:var(--display);font-size:11px;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--accent);color:var(--accent);padding:5px 12px;border-radius:999px}
+.s-title{font-family:var(--display);font-weight:800;font-size:clamp(56px,16vw,104px);letter-spacing:.18em;margin:0;line-height:1;padding-left:.18em}
+.s-lead{margin:0;font-size:17px;font-weight:300;max-width:34ch}
+.jars{display:flex;justify-content:center;gap:4px;margin-top:8px}
+.jar{width:min(30%,150px);height:auto}
+.story{display:flex;flex-direction:column;gap:12px;font-size:16px;font-weight:300}.story p{margin:0}
+.heri{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.h-item{background:var(--card);border-radius:4px;padding:18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.h-item p{margin:0;font-size:14px;color:var(--muted)}
+.h-k{font-family:var(--display);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.swatches{display:flex;flex-wrap:wrap;gap:10px 18px;font-family:var(--display);font-size:12px;color:var(--muted);letter-spacing:.06em}
+.sw{display:inline-flex;align-items:center;gap:8px}.sw i{width:18px;height:18px;border-radius:50%;border:1px solid var(--line);display:inline-block}
+.pdp-list{display:flex;flex-direction:column;gap:16px}
+.pdp{background:var(--card);border-radius:4px;overflow:hidden;display:grid;grid-template-columns:1fr}
+.pdp-vis{background:radial-gradient(circle at 50% 40%,#2a2a2a,#121212);display:flex;justify-content:center;align-items:center;padding:20px}
+.pdp-vis .jar{width:min(55%,200px)}
+.pdp-body{padding:22px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.pdp-body h3{font-family:var(--display);font-size:24px;margin:0}
+.pdp-body p{margin:0}.pdp-hook{font-size:17px;color:var(--accent)}
+.spec{margin:6px 0 0;display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:14px;border-top:1px solid var(--line);padding-top:12px}
+.spec dt{font-family:var(--display);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}.spec dd{margin:0}
+@media (min-width:640px){.pdp{grid-template-columns:40% 1fr}}
+@media (max-width:420px){.spec{grid-template-columns:1fr}}
+.tm{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.tm-col{background:var(--card);border-radius:4px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.tm-col ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.s-lead2{margin:0;font-size:16px;font-weight:300}
+
+/* light theme */
+:root:is([data-theme="light"],[data-theme="pink"],[data-theme="sky"]){--bg:#FAF8F4;--card:#FFFFFF;--line:#E3DED4;--fg:#141414;--muted:#6E695F;--accent:#9A7B45;color-scheme:light}
+:root:is([data-theme="light"],[data-theme="pink"],[data-theme="sky"]) .card,:root:is([data-theme="light"],[data-theme="pink"],[data-theme="sky"]) .h-item,:root:is([data-theme="light"],[data-theme="pink"],[data-theme="sky"]) .tm-col,:root:is([data-theme="light"],[data-theme="pink"],[data-theme="sky"]) .legend,:root:is([data-theme="light"],[data-theme="pink"],[data-theme="sky"]) .pdp{box-shadow:0 0 0 1px var(--line)}
+:root:is([data-theme="light"],[data-theme="pink"],[data-theme="sky"]) .issue:hover{background:#F1EDE5}
+:root:is([data-theme="light"],[data-theme="pink"],[data-theme="sky"]) .b-oem{box-shadow:0 0 0 1px #141414}
+.top{align-items:center}
+.top-r{display:flex;align-items:center;gap:14px}
+.top{flex-wrap:nowrap!important}
+@media (max-width:480px){.top-r>span:first-child{display:none}}
+.iconbtn{font:inherit;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--fg);cursor:pointer;padding:0;flex:none}
+.iconbtn:hover{border-color:var(--accent)}
+.iconbtn svg{width:16px;height:16px}
+.bar-r{display:flex;align-items:center;gap:10px;min-width:0}
+
+.ecard .body{padding:20px 22px}
+.ticker{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.tk{background:var(--bg);padding:12px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.tk .l{font-family:var(--display);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.tk .v{font-family:var(--display);font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}
+.tk .c{font-family:var(--display);font-size:12px;font-variant-numeric:tabular-nums;color:var(--muted)}
+.tk .up{color:#E8505B}.tk .down{color:#4C8DF6}
+@media (max-width:480px){.ticker{grid-template-columns:repeat(2,1fr)}}
+
+/* retail rank */
+.retail{gap:28px}
+.ch{display:flex;flex-direction:column;gap:18px;border-top:1px solid var(--fg);padding-top:18px}
+.ch[hidden]{display:none}
+.ch-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.ch-h h3{font-family:var(--display);font-weight:800;font-size:clamp(26px,6vw,34px);letter-spacing:-.02em;line-height:1.05;margin:0}
+.rg{font-family:var(--display);font-size:11px;letter-spacing:.18em;color:var(--accent)}
+.ch-note{font-size:13px;color:var(--muted);margin:0;border-left:2px solid var(--accent);padding-left:10px}
+.rl{display:flex;flex-direction:column;gap:6px;min-width:0}
+.rl-h{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px}
+.rl-h h4{margin:0;font-family:var(--display);font-size:15px;font-weight:700;flex:1 1 100%}
+.bs{border:1px solid var(--accent);color:var(--accent);border-radius:999px;font-size:11px;padding:2px 10px;font-family:var(--display);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.per{font-size:12px;color:var(--muted)}
+.rks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.rk{display:grid;grid-template-columns:30px 40px minmax(0,1fr);gap:12px;align-items:start;padding:14px 0;border-bottom:1px solid var(--line)}
+.rk .no{font-family:var(--display);font-weight:800;font-size:19px;color:var(--accent);font-variant-numeric:tabular-nums;padding-top:4px}
+.pf{width:40px;height:54px;fill:rgba(var(--t),.3);stroke:var(--fg);stroke-width:1.3;stroke-linejoin:round;stroke-linecap:round}
+.pfl{position:relative;display:block;width:40px;text-decoration:none;color:var(--fg);border-radius:4px}.pfl:hover .pf,.pfl:focus-visible .pf{stroke:var(--accent)}.pfl .go{position:absolute;right:-6px;top:-4px;width:16px;height:16px;border-radius:50%;background:var(--accent);color:var(--bg);font-size:10px;line-height:16px;text-align:center}
+.rb{min-width:0;display:flex;flex-direction:column;gap:4px}
+.br{font-family:var(--display);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.rb h4{margin:0;font-size:16px;font-weight:500;line-height:1.35;word-break:keep-all;overflow-wrap:anywhere}
+.rspec{display:flex;flex-wrap:wrap;gap:2px 14px;margin:2px 0 0;font-size:13px}
+.rspec div{display:flex;gap:6px}.rspec dt{color:var(--muted)}.rspec dd{margin:0;font-variant-numeric:tabular-nums}
+.ft{margin:0;font-size:13px;color:var(--muted)}
+.promo{margin:0;font-size:13px;display:flex;align-items:flex-start;gap:6px}.promo b{flex:none;display:inline-grid;place-items:center;width:17px;height:17px;border-radius:50%;background:var(--accent);color:var(--bg);font-size:10px;margin-top:2px}
+.rk.gap{grid-template-columns:auto minmax(0,1fr);color:var(--muted);font-size:13px;align-items:center}.rk.gap p{margin:0}.rk.gap .no{font-size:13px;padding:0}
+.note-box{background:var(--card);border-radius:4px;padding:18px 20px}.note-box h4{margin:0 0 10px;font-family:var(--display);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.note-box ul,.promos{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px}
+[data-mode="both"] .ft .l-ko,[data-mode="both"] .ch-note .l-ko,[data-mode="both"] .note-box li .l-ko,[data-mode="both"] .promos .l-ko,[data-mode="both"] .rk.gap .l-ko,[data-mode="both"] .rl-h h4 .l-ko{display:block;color:var(--muted);margin-top:2px}
+[data-mode="both"] .promo .l-ko{display:none}
+[data-mode="both"] .rspec dt .l-ko,[data-mode="both"] .bs .l-ko,[data-mode="both"] .per .l-ko,[data-mode="both"] .retail .sh .l-ko,[data-mode="both"] .note-box h4 .l-ko{display:none}
+
+/* ===== metallic ("쇠맛") theme — dark gunmetal / light brushed silver ===== */
+:root{--bg:#121417;--card:#1B1E22;--line:#30343A;--fg:#F2F4F6;--muted:#9AA1AA;--accent:#CDB58A;--pastel:#F4B8CB;
+  --glass:rgba(18,20,23,.82);--card-hi:#262A30;--card-lo:#181B1F;--edge:rgba(255,255,255,.07);
+  --sheen1:rgba(220,226,235,.16);--sheen2:rgba(170,182,198,.10);--brush:rgba(255,255,255,.018);
+  --m1:#1C1F23;--m2:#0F1113;--m3:#171A1E;
+  --chrome:linear-gradient(180deg,#FFFFFF 0%,#D9DDE3 38%,#868D97 52%,#C9CED6 70%,#F4F6F8 100%)}
+:root:is([data-theme="light"],[data-theme="pink"],[data-theme="sky"]){--bg:#E8EAED;--card:#F4F5F7;--line:#C9CED5;--fg:#15171A;--muted:#5C636D;--accent:#8C6E3C;--pastel:#D987A3;
+  --glass:rgba(232,234,237,.86);--card-hi:#FFFFFF;--card-lo:#E9EBEE;--edge:rgba(0,0,0,.07);
+  --sheen1:rgba(255,255,255,.85);--sheen2:rgba(255,255,255,.5);--brush:rgba(0,0,0,.022);
+  --m1:#F2F3F5;--m2:#D8DBE0;--m3:#EBEDF0;
+  --chrome:linear-gradient(180deg,#5A6069 0%,#15171A 42%,#8E949D 54%,#2A2D32 72%,#4B5058 100%);color-scheme:light}
+body{background-color:var(--bg);background-image:
+  repeating-linear-gradient(90deg,var(--brush) 0 1px,transparent 1px 3px),
+  radial-gradient(120% 55% at 12% -8%,var(--sheen1),transparent 60%),
+  radial-gradient(70% 45% at 108% 35%,var(--sheen2),transparent 62%),
+  linear-gradient(180deg,var(--m1) 0%,var(--m2) 48%,var(--m3) 100%);background-attachment:fixed}
+.card,.note-box,.issue{background:linear-gradient(145deg,var(--card-hi),var(--card-lo) 58%,var(--card-hi));border:1px solid var(--edge);box-shadow:inset 0 1px 0 var(--edge)}
+.bar,.tabs{background:var(--glass);-webkit-backdrop-filter:blur(12px) saturate(1.2);backdrop-filter:blur(12px) saturate(1.2)}
+.mast h1{padding-bottom:.16em;margin-bottom:-.16em;background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mast h1 span{color:transparent}
+/* categories bold */
+.tabs a{font-weight:700}
+/* SEOEN in soft pastel pink */
+.tabs a.t-brand{color:var(--pastel);font-weight:800}
+.tabs a.t-brand[aria-current="page"]{color:var(--pastel);border-bottom-color:var(--pastel)}
+.brand{color:var(--pastel)}
+.s-title{color:var(--pastel)}
+/* cover → article link */
+a.thl{display:block;position:relative;text-decoration:none;color:inherit;min-width:0}
+a.thl .th{height:100%}
+a.thl .go{position:absolute;top:12px;right:12px;z-index:3;width:26px;height:26px;border-radius:50%;background:rgba(245,240,230,.92);color:#141414;font-size:13px;line-height:26px;text-align:center;font-family:var(--display);font-weight:700}
+a.thl:hover .th,a.thl:focus-visible .th{filter:brightness(1.08)}
+
+/* option B — European hotel boiserie */
+:root{--wall:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22260%22%20height%3D%22420%22%20viewBox%3D%220%200%20260%20420%22%3E%0A%3Crect%20width%3D%22260%22%20height%3D%22420%22%20fill%3D%22transparent%22/%3E%0A%3Cpath%20d%3D%22M34%2024h192a10%2010%200%200%200%2010%2010v352a10%2010%200%200%200-10%2010H34a10%2010%200%200%200-10-10V34a10%2010%200%200%200%2010-10z%22%20fill%3D%22none%22%20stroke%3D%22rgba%28205%2C181%2C138%2C.20%29%22%20stroke-width%3D%222.2%22/%3E%0A%3Cpath%20d%3D%22M44%2036h172a8%208%200%200%200%208%208v332a8%208%200%200%200-8%208H44a8%208%200%200%200-8-8V44a8%208%200%200%200%208-8z%22%20fill%3D%22none%22%20stroke%3D%22rgba%28205%2C181%2C138%2C.10%29%22%20stroke-width%3D%221%22/%3E%0A%3Ccircle%20cx%3D%22130%22%20cy%3D%2258%22%20r%3D%223%22%20fill%3D%22rgba%28205%2C181%2C138%2C.20%29%22/%3E%3Cpath%20d%3D%22M118%2058h-30M142%2058h30%22%20stroke%3D%22rgba%28205%2C181%2C138%2C.10%29%22%20stroke-width%3D%221%22/%3E%0A%3C/svg%3E");--wallbg:#141619;--rail:rgba(205,181,138,.28)}
+:root:is([data-theme="light"],[data-theme="pink"],[data-theme="sky"]){--wall:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22260%22%20height%3D%22420%22%20viewBox%3D%220%200%20260%20420%22%3E%0A%3Crect%20width%3D%22260%22%20height%3D%22420%22%20fill%3D%22transparent%22/%3E%0A%3Cpath%20d%3D%22M34%2024h192a10%2010%200%200%200%2010%2010v352a10%2010%200%200%200-10%2010H34a10%2010%200%200%200-10-10V34a10%2010%200%200%200%2010-10z%22%20fill%3D%22none%22%20stroke%3D%22rgba%28140%2C110%2C60%2C.20%29%22%20stroke-width%3D%222.2%22/%3E%0A%3Cpath%20d%3D%22M44%2036h172a8%208%200%200%200%208%208v332a8%208%200%200%200-8%208H44a8%208%200%200%200-8-8V44a8%208%200%200%200%208-8z%22%20fill%3D%22none%22%20stroke%3D%22rgba%28217%2C135%2C163%2C.18%29%22%20stroke-width%3D%221%22/%3E%0A%3Ccircle%20cx%3D%22130%22%20cy%3D%2258%22%20r%3D%223%22%20fill%3D%22rgba%28140%2C110%2C60%2C.20%29%22/%3E%3Cpath%20d%3D%22M118%2058h-30M142%2058h30%22%20stroke%3D%22rgba%28217%2C135%2C163%2C.18%29%22%20stroke-width%3D%221%22/%3E%0A%3C/svg%3E");--wallbg:#F3EFE8;--rail:rgba(140,110,60,.3)}
+body{background-color:var(--wallbg);background-image:
+  radial-gradient(120% 55% at 12% -8%,var(--sheen1),transparent 60%),
+  radial-gradient(90% 60% at 50% 110%,rgba(0,0,0,.18),transparent 70%),
+  var(--wall);background-size:auto,auto,260px 420px;background-position:0 0,0 0,center top;background-attachment:fixed}
+.mast{border-bottom:3px double var(--rail)}
+.sh{border-top:1px solid var(--rail)}
+.mast h1{font-family:"Playfair Display",Georgia,serif;font-weight:700;letter-spacing:-.01em}
+.mast h1 span{font-style:italic;font-weight:400}
+
+/* framed reading panel so the wall shows around it */
+:root{--panel:rgba(17,19,22,.9)}
+:root:is([data-theme="light"],[data-theme="pink"],[data-theme="sky"]){--panel:rgba(250,248,245,.92)}
+.wrap{background:var(--panel);border:1px solid var(--edge);box-shadow:0 20px 60px rgba(0,0,0,.25);padding:48px clamp(14px,4vw,52px) 40px;border-radius:2px}
+.bar,.tabs{background:var(--panel)}
+body{padding-block:28px 48px}
+@media (max-width:480px){body{padding-left:max(10px,env(safe-area-inset-left,0px));padding-right:max(10px,env(safe-area-inset-right,0px))}}
+
+/* pink mode — SEOEN rose salon */
+:root[data-theme="pink"]{--bg:#F7E6EB;--card:#FFF8FA;--line:#EBCFD8;--fg:#2B1F24;--muted:#7E6670;--accent:#A9765F;--pastel:#D0789A;
+  --glass:rgba(253,244,247,.9);--card-hi:#FFFFFF;--card-lo:#F9EAEF;--edge:rgba(160,90,115,.10);
+  --sheen1:rgba(255,255,255,.9);--sheen2:rgba(255,255,255,.5);--brush:rgba(160,90,115,.02);
+  --m1:#FAEEF2;--m2:#F2DCE3;--m3:#F7E7EC;--panel:rgba(255,248,250,.93);
+  --wall:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22260%22%20height%3D%22420%22%20viewBox%3D%220%200%20260%20420%22%3E%3Cpath%20d%3D%22M34%2024h192a10%2010%200%200%200%2010%2010v352a10%2010%200%200%200-10%2010H34a10%2010%200%200%200-10-10V34a10%2010%200%200%200%2010-10z%22%20fill%3D%22none%22%20stroke%3D%22rgba%28196%2C120%2C150%2C.32%29%22%20stroke-width%3D%222.2%22/%3E%3Cpath%20d%3D%22M44%2036h172a8%208%200%200%200%208%208v332a8%208%200%200%200-8%208H44a8%208%200%200%200-8-8V44a8%208%200%200%200%208-8z%22%20fill%3D%22none%22%20stroke%3D%22rgba%28205%2C170%2C120%2C.32%29%22%20stroke-width%3D%221%22/%3E%3Ccircle%20cx%3D%22130%22%20cy%3D%2258%22%20r%3D%223%22%20fill%3D%22rgba%28196%2C120%2C150%2C.32%29%22/%3E%3Cpath%20d%3D%22M118%2058h-30M142%2058h30%22%20stroke%3D%22rgba%28205%2C170%2C120%2C.32%29%22%20stroke-width%3D%221%22/%3E%3C/svg%3E");--wallbg:#F5E1E8;--rail:rgba(169,118,95,.38);
+  --chrome:linear-gradient(180deg,#B9879A 0%,#4A2E38 42%,#C99AA9 54%,#5C3A46 72%,#8C5E6E 100%);color-scheme:light}
+.ic-pink svg{color:#E58FAE}
+
+/* colour wheel — custom wall colour */
+.wheel{position:relative;overflow:hidden;background:conic-gradient(from 0deg,#FF8FB1,#FFD59E,#FFF3A8,#B8F0C8,#A8D8FF,#C9B5FF,#FF8FB1)!important;border:1px solid var(--line)}
+.wheel::after{content:"";position:absolute;inset:9px;border-radius:50%;background:var(--wallbg);border:1px solid var(--edge)}
+.wheel input{position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:pointer;border:0;padding:0}
+.theme-btns{display:flex;gap:8px;align-items:center}
+
+@media (max-width:480px){.bar{gap:6px}.toggle{flex:1 1 auto;min-width:0}.toggle button{padding:6px 7px;letter-spacing:.04em;font-size:11px}.theme-btns{gap:6px}}
+
+/* industry marquee — makers · raw materials · packaging */
+.mq{position:relative;overflow:hidden;border-block:1px solid var(--rail,var(--line));padding-block:12px;margin-bottom:8px;
+  margin-top:-24px}
+.panel>.mq{margin-bottom:-28px}
+.mq-win{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.mq-h{display:flex;justify-content:space-between;gap:12px;font-family:var(--display);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.mq-track{display:flex;gap:10px;width:max-content;animation:mq 60s linear infinite}
+.mq:hover .mq-track,.mq:focus-within .mq-track{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.mq a{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;text-decoration:none;color:var(--fg);border:1px solid var(--line);background:var(--card-hi,var(--card));border-radius:999px;padding:7px 14px 7px 8px}
+.mq a:hover,.mq a:focus-visible{border-color:var(--accent)}
+.mq .wm{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:15px;letter-spacing:.01em}
+.mq .kr{font-size:12px;color:var(--muted)}
+.mq .badge{font-size:9px;padding:3px 7px;margin:0}
+.b-pkg{background:#F4B8CB;color:#141414}
+@media (prefers-reduced-motion:reduce){.mq-track{animation:none;width:auto;flex-wrap:wrap}.mq-win{-webkit-mask-image:none;mask-image:none}.mq-track a[aria-hidden]{display:none}}
+
+/* sky mode — SEOEN morning suite */
+:root[data-theme="sky"]{--bg:#DCEAF4;--card:#F7FBFE;--line:#CBDCE8;--fg:#15202A;--muted:#5A6977;--accent:#8C6E3C;--pastel:#D987A3;
+  --glass:rgba(246,250,253,.9);--card-hi:#FFFFFF;--card-lo:#EAF2F8;--edge:rgba(60,100,140,.10);
+  --sheen1:rgba(255,255,255,.9);--sheen2:rgba(255,255,255,.5);--brush:rgba(60,100,140,.02);
+  --m1:#E3EFF7;--m2:#BCD5E8;--m3:#D5E6F2;--panel:rgba(247,251,254,.93);
+  --wall:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22260%22%20height%3D%22420%22%20viewBox%3D%220%200%20260%20420%22%3E%3Cpath%20d%3D%22M34%2024h192a10%2010%200%200%200%2010%2010v352a10%2010%200%200%200-10%2010H34a10%2010%200%200%200-10-10V34a10%2010%200%200%200%2010-10z%22%20fill%3D%22none%22%20stroke%3D%22rgba%2880%2C120%2C160%2C.30%29%22%20stroke-width%3D%222.2%22/%3E%3Cpath%20d%3D%22M44%2036h172a8%208%200%200%200%208%208v332a8%208%200%200%200-8%208H44a8%208%200%200%200-8-8V44a8%208%200%200%200%208-8z%22%20fill%3D%22none%22%20stroke%3D%22rgba%28205%2C170%2C120%2C.32%29%22%20stroke-width%3D%221%22/%3E%3Ccircle%20cx%3D%22130%22%20cy%3D%2258%22%20r%3D%223%22%20fill%3D%22rgba%2880%2C120%2C160%2C.30%29%22/%3E%3Cpath%20d%3D%22M118%2058h-30M142%2058h30%22%20stroke%3D%22rgba%28205%2C170%2C120%2C.32%29%22%20stroke-width%3D%221%22/%3E%3C/svg%3E");--wallbg:#C9DFEE;--rail:rgba(80,120,160,.35);
+  --chrome:linear-gradient(180deg,#7D93A8 0%,#15202A 42%,#9FB3C6 54%,#22313F 72%,#4E6378 100%);color-scheme:light}
+.ic-sky svg{color:#7FB2D8}
+
+/* macro: at-a-glance cards + bar charts */
+.kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.kpi{background:linear-gradient(145deg,var(--card-hi),var(--card-lo));border:1px solid var(--edge);border-radius:4px;padding:16px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.kpi .k{font-family:var(--display);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.kpi .v{font-family:var(--display);font-weight:800;font-size:clamp(26px,7vw,34px);line-height:1.05;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.kpi .d{font-size:12px;color:var(--muted)}.kpi .d b{color:var(--accent);font-weight:700}
+.chart{background:linear-gradient(145deg,var(--card-hi),var(--card-lo));border:1px solid var(--edge);border-radius:4px;padding:18px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.chart h3{margin:0;font-family:var(--display);font-size:15px;font-weight:700}
+.chart .cs{margin:-8px 0 0;font-size:12px;color:var(--muted)}
+.hb{display:flex;flex-direction:column;gap:10px;margin:0;padding:0;list-style:none}
+.hb li{display:grid;grid-template-columns:minmax(72px,30%) minmax(0,1fr) auto;align-items:center;gap:10px;font-size:13px}
+.hb .lb{color:var(--fg);min-width:0}
+.hb .tr{height:14px;border-radius:2px;background:var(--line);position:relative;overflow:hidden}
+.hb .fl{position:absolute;inset:0 auto 0 0;border-radius:0 4px 4px 0;background:var(--accent)}
+.hb .fl.est{background:repeating-linear-gradient(135deg,var(--accent) 0 3px,transparent 3px 6px);border:1px solid var(--accent)}
+.hb .vl{font-family:var(--display);font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.hb li:hover .fl{filter:brightness(1.12)}
+.chart .fn{margin:0;font-size:11px;color:var(--muted)}
+.mini td,.mini th{white-space:normal}
+.tbl table.mini{min-width:0;width:100%;table-layout:fixed}.mini th:first-child,.mini td:first-child{width:42%}.mini th:last-child,.mini td:last-child{width:24%}
+.mini td,.mini th{padding:10px 8px;font-size:13px;word-break:keep-all;overflow-wrap:anywhere}
+.mini td:nth-child(2){font-family:var(--display);font-weight:700;font-variant-numeric:tabular-nums}.mini small{font-weight:500;color:var(--muted)}
+[data-mode="both"] .kpi .k .l-ko,[data-mode="both"] .chart h3 .l-ko,[data-mode="both"] .hb .lb .l-ko{display:block;color:var(--muted);font-size:11px}
+
+/* Quick Look — 30-second preview card news at the top of every tab */
+.qk{display:flex;flex-direction:column;gap:12px;margin-bottom:-20px}
+.qk-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.qk-h h2{margin:0;font-family:var(--display);font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.qk-h small{font-size:12px;color:var(--muted)}
+.qk-row{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,1fr);gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:4px;scrollbar-width:thin}
+.qkc{scroll-snap-align:start;display:flex;flex-direction:column;text-align:left;font:inherit;color:inherit;cursor:pointer;padding:0;border:1px solid var(--edge);border-radius:4px;overflow:hidden;background:linear-gradient(145deg,var(--card-hi),var(--card-lo));min-width:0}
+.qkc:hover,.qkc:focus-visible{border-color:var(--accent)}
+.qkc .th{aspect-ratio:16/10;min-height:0}
+.qkc .th .ov{padding:14px;gap:4px}
+.qkc .th .kw{font-size:clamp(20px,5vw,26px)}
+.qkc .qn{position:absolute;top:10px;left:12px;z-index:3;font-family:var(--display);font-weight:800;font-size:13px;color:#F5F0E6;letter-spacing:.08em}
+.qkc .qb{padding:12px 14px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.qkc .qt{font-weight:700;font-size:14px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;word-break:keep-all}
+.qkc .qm{font-family:var(--display);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.qk-hit{outline:2px solid var(--accent);outline-offset:4px;transition:outline-color 1.2s}
+@media (min-width:760px){.qk-row{grid-auto-flow:row;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}}
+@media (min-width:640px){.qkc .th{display:block}}
+
+/* sponsor-style rotating spotlight */
+.sp-stage{position:relative;height:118px;border-radius:4px;overflow:hidden;border:1px solid var(--rail,var(--line));background:radial-gradient(120% 140% at 0% 0%,var(--card-hi),var(--card-lo))}
+.sp-s{position:absolute;inset:0;display:grid;grid-template-columns:auto 1fr auto;grid-template-rows:auto auto;align-content:center;column-gap:14px;row-gap:4px;padding:18px 20px;text-decoration:none;color:var(--fg);opacity:0;transform:translateY(8px);transition:opacity .6s ease,transform .6s ease;pointer-events:none}
+.sp-s.on{opacity:1;transform:none;pointer-events:auto}
+.sp-s .badge{grid-row:1/3;align-self:center;font-size:10px;padding:5px 9px}
+.sp-n{font-family:"Playfair Display",Georgia,serif;font-weight:700;font-size:clamp(24px,6.5vw,34px);line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.sp-k{grid-column:2;font-size:13px;color:var(--muted)}
+.sp-d{grid-column:2;font-size:12px;color:var(--muted);display:none}
+.sp-go{grid-row:1/3;grid-column:3;align-self:center;width:34px;height:34px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);display:grid;place-items:center;font-family:var(--display);font-weight:700}
+@media (min-width:560px){.sp-d{display:block}.sp-k{display:inline}}
+.sp-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px}
+.sp-dots{display:flex;flex-wrap:wrap;gap:5px;min-width:0}
+.sp-dots i{width:6px;height:6px;border-radius:50%;background:var(--line);cursor:pointer}
+.sp-dots i.on{background:var(--accent);width:16px;border-radius:3px}
+.sp-tog{font:inherit;font-family:var(--display);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--fg);background:transparent;border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer;white-space:nowrap}
+.sp-tog:hover{border-color:var(--accent)}
+.sp-tag{font-size:10px;letter-spacing:.14em;border:1px solid var(--line);border-radius:999px;padding:2px 8px}
+.mq.sp .mq-win{margin-top:10px}
+.mq.sp{-webkit-mask-image:none;mask-image:none}
+@media (prefers-reduced-motion:reduce){.sp-s{transition:none}}
+
+.mq a.sp-s{display:grid;border:0;border-radius:0;background:transparent;padding:18px 20px;white-space:normal;gap:4px 14px}
+.mq a.sp-s:hover .sp-go{background:var(--accent);color:var(--bg)}
+
+/* country flags */
+.flg{font-family:"Noto Color Emoji","Apple Color Emoji","Segoe UI Emoji",sans-serif;font-style:normal;letter-spacing:0;margin-right:.3em;font-size:1.15em;line-height:1;vertical-align:-.08em;text-transform:none}
+.chips button .flg{font-size:1.25em}
+.th .src .flg{font-size:1.4em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="mast">
+  <div class="top"><span id="issueNo">Issue</span><span class="top-r"><span>Seoul 08:00 KST</span><button type="button" class="iconbtn" id="exitBtn" aria-label="Exit / 나가기" title="Exit / 나가기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg></button></span></div>
+  <span class="brand">SEOEN Journal</span>
+  <h1>Daily Beauty <span>Briefing</span></h1>
+  <p><span class="l-en" lang="en">K-beauty · Wellness hotels · Skincare · Marketing — English summaries with translations</span><span class="l-ko" lang="ko">K-뷰티 · 웰니스 호텔 · 스킨케어 · 마케팅 — 영어 원문 요약과 한국어 해설</span><span class="l-fr" lang="fr">K-beauté · Hôtels bien-être · Soins · Marketing — résumés en anglais</span><span class="l-zh" lang="zh">韩妆 · 健康酒店 · 护肤 · 营销 — 英文摘要与译文</span><span class="l-ja" lang="ja">Kビューティー · ウェルネスホテル · スキンケア · マーケティング — 英語要約と翻訳</span></p>
+</header>
+<div class="bar"><span class="lbl l-en">Reading mode</span><span class="lbl l-ko">읽기 모드</span><span class="lbl l-fr">Langue</span><span class="lbl l-zh">阅读语言</span><span class="lbl l-ja">表示言語</span><div class="bar-r"><div class="toggle" role="group" aria-label="Language"><button type="button" data-m="en" aria-pressed="false" lang="en">EN</button><button type="button" data-m="ko" aria-pressed="false" lang="ko">KO</button><button type="button" data-m="fr" aria-pressed="false" lang="fr">FR</button><button type="button" data-m="zh" aria-pressed="false" lang="zh">中文</button><button type="button" data-m="ja" aria-pressed="false" lang="ja">日本語</button><button type="button" data-m="both" aria-pressed="false" lang="ko">EN+KO</button></div><span class="theme-btns"><label class="iconbtn wheel" title="Wall colour / 벽 색상 고르기"><input type="color" id="wallPick" value="#F5E1E8" aria-label="Pick wall colour / 벽 색상 고르기"></label><button type="button" class="iconbtn" id="themeBtn" aria-label="Switch theme / 테마 전환" title="Dark / Light / Pink / Sky"><span class="ic-dark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg></span><span class="ic-pink" hidden><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 20.5s-7.5-4.6-7.5-10.1A4.4 4.4 0 0 1 12 7.6a4.4 4.4 0 0 1 7.5 2.8c0 5.5-7.5 10.1-7.5 10.1z"/></svg></span><span class="ic-sky" hidden><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M7.5 18.5h10a4 4 0 0 0 .6-7.95A5.5 5.5 0 0 0 7.6 9.1 4.7 4.7 0 0 0 7.5 18.5z"/></svg></span><span class="ic-light" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg></span></button></span></div></div>
+<nav class="tabs" aria-label="Categories"><div class="tabs-in"><a href="#archive" data-t="archive"><span class="l-en">Archive</span><span class="l-ko">지난 호</span><span class="l-fr">Archives</span><span class="l-zh">往期</span><span class="l-ja">アーカイブ</span></a><a href="#seoen" data-t="seoen" class="t-brand">SEOEN</a><a href="#news" data-t="news"><span class="l-en">Beauty News</span><span class="l-ko">뷰티 뉴스</span><span class="l-fr">Actualités beauté</span><span class="l-zh">美妆新闻</span><span class="l-ja">ビューティーニュース</span></a><a href="#mag" data-t="mag"><span class="l-en">Magazine</span><span class="l-ko">매거진</span><span class="l-fr">Magazine</span><span class="l-zh">杂志</span><span class="l-ja">マガジン</span></a><a href="#retail" data-t="retail"><span class="l-en">Retail Rank</span><span class="l-ko">유통 랭킹</span><span class="l-fr">Classements</span><span class="l-zh">渠道排行</span><span class="l-ja">販売ランキング</span></a><a href="#econ" data-t="econ"><span class="l-en">Economy</span><span class="l-ko">경제</span><span class="l-fr">Économie</span><span class="l-zh">经济</span><span class="l-ja">経済</span></a><a href="#macro" data-t="macro"><span class="l-en">Industry Macro</span><span class="l-ko">산업 거시경제</span><span class="l-fr">Macro-industrie</span><span class="l-zh">产业宏观</span><span class="l-ja">業界マクロ</span></a><a href="#stocks" data-t="stocks"><span class="l-en">Stocks</span><span class="l-ko">주가</span><span class="l-fr">Bourse</span><span class="l-zh">股价</span><span class="l-ja">株価</span></a><a href="#ingredients" data-t="ingredients"><span class="l-en">Ingredients</span><span class="l-ko">원료</span><span class="l-fr">Ingrédients</span><span class="l-zh">成分</span><span class="l-ja">成分</span></a><a href="#makers" data-t="makers"><span class="l-en">Makers</span><span class="l-ko">제조사</span><span class="l-fr">Fabricants</span><span class="l-zh">制造商</span><span class="l-ja">メーカー</span></a><a href="#marketing" data-t="marketing"><span class="l-en">Marketing</span><span class="l-ko">마케팅</span><span class="l-fr">Marketing</span><span class="l-zh">营销</span><span class="l-ja">マーケティング</span></a><a href="#product" data-t="product"><span class="l-en">Product Planning</span><span class="l-ko">상품 기획</span><span class="l-fr">Développement produit</span><span class="l-zh">产品企划</span><span class="l-ja">商品企画</span></a><a href="#ra" data-t="ra"><span class="l-en">RA</span><span class="l-ko">RA·규제</span><span class="l-fr">Réglementation</span><span class="l-zh">法规</span><span class="l-ja">規制</span></a><a href="#english" data-t="english"><span class="l-en">English Corner</span><span class="l-ko">영어 코너</span><span class="l-fr">Coin anglais</span><span class="l-zh">英语角</span><span class="l-ja">英語コーナー</span></a></div></nav>
+<template id="tpl-seoen"><div class="panel" data-p="seoen"><section class="hero-s"><span class="concept"><span class="l-en" lang="en">Concept · Pre-launch brand plan</span><span class="l-ko" lang="ko">Concept · 출시 전 브랜드 기획안</span><span class="l-fr" lang="fr">Concept · Projet de marque avant lancement</span><span class="l-zh" lang="zh">概念 · 上市前品牌企划</span><span class="l-ja" lang="ja">コンセプト · 発売前のブランド企画</span></span><h2 class="s-title">SEOEN</h2><p class="s-lead l-en" lang="en">Auspicious energy, drawn from the first light of dawn.</p><p class="s-lead l-ko" lang="ko">새벽빛에서 얻는 상서로운 에너지</p><p class="s-lead l-fr" lang="fr">Une énergie de bon augure, puisée dans la première lumière de l’aube.</p><p class="s-lead l-zh" lang="zh">汲取自晨曦第一缕光的祥瑞能量</p><p class="s-lead l-ja" lang="ja">夜明けの光から授かる、瑞々しいエネルギー</p><div class="jars"><svg viewBox="0 0 200 260" class="jar" aria-hidden="true"><defs><radialGradient id="g150" cx="38%" cy="40%" r="70%"><stop offset="0" stop-color="#3a3a3a"/><stop offset="1" stop-color="#1d1d1d"/></radialGradient></defs>
+<ellipse cx="100" cy="246" rx="62" ry="6" fill="#000" opacity=".5"/>
+<path d="M78 90 C 30 100, 28 236, 70 242 L130 242 C 172 236, 170 100, 122 90 Z" fill="url(#g150)" stroke="#3a3a3a"/>
+<rect x="80" y="56" width="40" height="34" rx="4" fill="#CDB58A"/>
+<path d="M84 64 h32 M84 72 h32 M84 80 h32" stroke="#141414" stroke-width="1" opacity=".35"/>
+<circle cx="100" cy="172.5" r="5" fill="#F5F5F3"/><path d="M120 68 q 26 10 22 48" fill="none" stroke="#CDB58A" stroke-width="1.5"/><circle cx="142" cy="118" r="4" fill="#B3263A"/><path d="M139 122 l-3 26 M142 122 l0 28 M145 122 l3 26" stroke="#B3263A" stroke-width="1.2"/></svg><svg viewBox="0 0 200 260" class="jar" aria-hidden="true"><defs><radialGradient id="g120" cx="38%" cy="40%" r="70%"><stop offset="0" stop-color="#3a3a3a"/><stop offset="1" stop-color="#1d1d1d"/></radialGradient></defs>
+<ellipse cx="100" cy="246" rx="62" ry="6" fill="#000" opacity=".5"/>
+<path d="M78 120 C 30 130, 28 236, 70 242 L130 242 C 172 236, 170 130, 122 120 Z" fill="url(#g120)" stroke="#3a3a3a"/>
+<rect x="80" y="86" width="40" height="34" rx="4" fill="#CDB58A"/>
+<path d="M84 94 h32 M84 102 h32 M84 110 h32" stroke="#141414" stroke-width="1" opacity=".35"/>
+<circle cx="100" cy="186.0" r="5" fill="#FF3D8B"/><path d="M120 98 q 26 10 22 48" fill="none" stroke="#CDB58A" stroke-width="1.5"/><circle cx="142" cy="148" r="4" fill="#B3263A"/><path d="M139 152 l-3 26 M142 152 l0 28 M145 152 l3 26" stroke="#B3263A" stroke-width="1.2"/></svg><svg viewBox="0 0 200 260" class="jar" aria-hidden="true"><defs><radialGradient id="g96" cx="38%" cy="40%" r="70%"><stop offset="0" stop-color="#3a3a3a"/><stop offset="1" stop-color="#1d1d1d"/></radialGradient></defs>
+<ellipse cx="100" cy="246" rx="62" ry="6" fill="#000" opacity=".5"/>
+<path d="M78 144 C 30 154, 28 236, 70 242 L130 242 C 172 236, 170 154, 122 144 Z" fill="url(#g96)" stroke="#3a3a3a"/>
+<rect x="80" y="110" width="40" height="34" rx="4" fill="#CDB58A"/>
+<path d="M84 118 h32 M84 126 h32 M84 134 h32" stroke="#141414" stroke-width="1" opacity=".35"/>
+<circle cx="100" cy="196.8" r="5" fill="#B3263A"/><path d="M120 122 q 26 10 22 48" fill="none" stroke="#CDB58A" stroke-width="1.5"/><circle cx="142" cy="172" r="4" fill="#B3263A"/><path d="M139 176 l-3 26 M142 176 l0 28 M145 176 l3 26" stroke="#B3263A" stroke-width="1.2"/></svg></div></section><section><div class="sh"><h2><span class="l-en" lang="en">Brand Story</span><span class="l-ko" lang="ko">브랜드 스토리</span><span class="l-fr" lang="fr">Histoire de la marque</span><span class="l-zh" lang="zh">品牌故事</span><span class="l-ja" lang="ja">ブランドストーリー</span></h2></div><div class="story"><p class="l-en" lang="en">SEOEN joins 瑞 (seo, &quot;auspicious&quot;) with the French énergie. It began with a simple wish: that the quiet minutes before the day starts could feel like a small ritual of your own.</p><p class="l-ko" lang="ko">SEOEN은 상서로울 서(瑞)와 프랑스어 에네르지(énergie)를 합친 이름이에요. 하루가 시작되기 전의 조용한 몇 분이 나만의 작은 의식이 되기를 바라는 마음에서 시작했어요.</p><p class="l-fr" lang="fr">SEOEN unit 瑞 (seo, « de bon augure ») et le mot français énergie. Tout est parti d’un souhait simple : que les quelques minutes calmes avant le début de la journée deviennent un petit rituel à soi.</p><p class="l-zh" lang="zh">SEOEN由“瑞”（seo，吉祥之意）与法语énergie组合而成。它源于一个简单的心愿：让一天开始前那几分钟的宁静，成为属于自己的小小仪式。</p><p class="l-ja" lang="ja">SEOENは「瑞（seo、めでたい）」とフランス語のénergieを合わせた名前です。一日が始まる前の静かな数分間が、自分だけの小さな儀式になるように——そんな願いから生まれました。</p><p class="l-en" lang="en">Daily luxury, to us, is not excess. It is care that is finished well, every day.</p><p class="l-ko" lang="ko">SEOEN이 말하는 데일리 럭셔리는 과함이 아니라, 매일 완성도 있게 돌보는 시간이에요.</p><p class="l-fr" lang="fr">Pour nous, le luxe du quotidien n’est pas l’excès : c’est un soin bien fini, chaque jour.</p><p class="l-zh" lang="zh">对我们而言，日常的奢华不是过度，而是每天用心完成的呵护。</p><p class="l-ja" lang="ja">私たちにとってのデイリーラグジュアリーは、過剰さではなく、毎日ていねいに仕上げるケアのことです。</p></div><div class="heri"><div class="h-item"><span class="h-k">Moon Jar</span><p class="l-en" lang="en">Bottles follow the curve of the Joseon moon jar: full, calm, slightly imperfect.</p><p class="l-ko" lang="ko">조선 달항아리의 곡선을 따라, 넉넉하고 고요한 형태의 용기를 설계했어요.</p><p class="l-fr" lang="fr">Les flacons suivent la courbe de la jarre lune de Joseon : pleine, calme, légèrement imparfaite.</p><p class="l-zh" lang="zh">瓶身沿袭朝鲜月亮罐的曲线：饱满、宁静、带着些许不完美。</p><p class="l-ja" lang="ja">ボトルは朝鮮時代の月壺の曲線から。ふくよかで静かな、少しだけ不完全なかたち。</p></div><div class="h-item"><span class="h-k">Norigae</span><p class="l-en" lang="en">A knotted tassel charm, after the norigae worn with hanbok, hangs from every kit.</p><p class="l-ko" lang="ko">한복에 다는 노리개에서 온 매듭 태슬 참을 키트마다 달아요.</p><p class="l-fr" lang="fr">Un pompon noué, inspiré du norigae porté avec le hanbok, orne chaque kit.</p><p class="l-zh" lang="zh">每个套装都挂着结绳流苏，灵感来自搭配韩服的“노리개”饰物。</p><p class="l-ja" lang="ja">韓服に添えるノリゲに着想を得た、結び目のタッセルチャームを各キットに。</p></div><div class="h-item"><span class="h-k">Embroidery</span><p class="l-en" lang="en">Caps carry an embossed pattern taken from traditional embroidery.</p><p class="l-ko" lang="ko">캡에는 전통 자수 문양을 엠보로 새겼어요.</p><p class="l-fr" lang="fr">Les bouchons portent un motif en relief issu de la broderie traditionnelle.</p><p class="l-zh" lang="zh">瓶盖压印着取自传统刺绣的纹样。</p><p class="l-ja" lang="ja">キャップには伝統刺繍の文様をエンボスで刻みました。</p></div><div class="h-item"><span class="h-k">Obangsaek</span><p class="l-en" lang="en">A single dot from the five traditional colors marks each product.</p><p class="l-ko" lang="ko">오방색에서 가져온 시그니처 도트 하나로 제품을 구분해요.</p><p class="l-fr" lang="fr">Un seul point, tiré des cinq couleurs traditionnelles, distingue chaque produit.</p><p class="l-zh" lang="zh">取自传统“五方色”的一枚圆点，用来区分每款产品。</p><p class="l-ja" lang="ja">伝統の五方色から取ったひとつのドットで、製品を見分けます。</p></div></div><div class="swatches"><span class="sw"><i style="background:#141414"></i>Black #141414</span><span class="sw"><i style="background:#CDB58A"></i>Champagne Gold #CDB58A</span><span class="sw"><i style="background:#FF3D8B"></i>Signature Pink #FF3D8B</span><span class="sw"><i style="background:#B3263A"></i>Red Point #B3263A</span></div></section><section><div class="sh"><h2><span class="l-en" lang="en">The Dawn Ritual · 3 Steps</span><span class="l-ko" lang="ko">새벽 루틴 · 3스텝</span><span class="l-fr" lang="fr">Le Rituel de l’Aube · 3 étapes</span><span class="l-zh" lang="zh">晨间仪式 · 3步</span><span class="l-ja" lang="ja">ドーンリチュアル · 3ステップ</span></h2><small><span class="l-en" lang="en">Names &amp; formulas are drafts</span><span class="l-ko" lang="ko">제품명·성분은 가안</span><span class="l-fr" lang="fr">Noms et formules provisoires</span><span class="l-zh" lang="zh">产品名与成分为暂定</span><span class="l-ja" lang="ja">製品名・成分は仮案</span></small></div><div class="pdp-list"><article class="pdp" id="pdp-toner"><div class="pdp-vis"><svg viewBox="0 0 200 260" class="jar" aria-hidden="true"><defs><radialGradient id="g150" cx="38%" cy="40%" r="70%"><stop offset="0" stop-color="#3a3a3a"/><stop offset="1" stop-color="#1d1d1d"/></radialGradient></defs>
+<ellipse cx="100" cy="246" rx="62" ry="6" fill="#000" opacity=".5"/>
+<path d="M78 90 C 30 100, 28 236, 70 242 L130 242 C 172 236, 170 100, 122 90 Z" fill="url(#g150)" stroke="#3a3a3a"/>
+<rect x="80" y="56" width="40" height="34" rx="4" fill="#CDB58A"/>
+<path d="M84 64 h32 M84 72 h32 M84 80 h32" stroke="#141414" stroke-width="1" opacity=".35"/>
+<circle cx="100" cy="172.5" r="5" fill="#F5F5F3"/><path d="M120 68 q 26 10 22 48" fill="none" stroke="#CDB58A" stroke-width="1.5"/><circle cx="142" cy="118" r="4" fill="#B3263A"/><path d="M139 122 l-3 26 M142 122 l0 28 M145 122 l3 26" stroke="#B3263A" stroke-width="1.2"/></svg></div><div class="pdp-body"><span class="meta"><span class="l-en" lang="en">Step 1</span><span class="l-ko" lang="ko">1단계</span><span class="l-fr" lang="fr">Étape 1</span><span class="l-zh" lang="zh">第1步</span><span class="l-ja" lang="ja">ステップ1</span></span><h3 class="l-en" lang="en">Dawn Mist Toner</h3><h3 class="l-ko" lang="ko">새벽 안개 토너</h3><h3 class="l-fr" lang="fr">Tonique Brume d’Aube</h3><h3 class="l-zh" lang="zh">晨雾爽肤水</h3><h3 class="l-ja" lang="ja">ドーンミスト トナー</h3><p class="pdp-hook l-en" lang="en">A first layer that settles like morning mist.</p><p class="pdp-hook l-ko" lang="ko">새벽 안개처럼 내려앉는 첫 단계.</p><p class="pdp-hook l-fr" lang="fr">Une première couche qui se dépose comme la brume du matin.</p><p class="pdp-hook l-zh" lang="zh">如晨雾般轻轻落下的第一步。</p><p class="pdp-hook l-ja" lang="ja">朝霧のようにやさしくなじむ、最初のステップ。</p><p class="l-en" lang="en">Watery and weightless, it smooths the look of skin texture and leaves a dewy base for the next step.</p><p class="l-ko" lang="ko">물처럼 가볍게 스며들어 피부결을 정돈하고, 다음 단계를 위한 촉촉한 바탕을 만들어요.</p><p class="l-fr" lang="fr">Aqueuse et légère, elle lisse l’apparence du grain de peau et laisse une base hydratée pour l’étape suivante.</p><p class="l-zh" lang="zh">水感轻盈，帮助整理肌肤纹理，为下一步打造水润底妆。</p><p class="l-ja" lang="ja">みずみずしく軽やかに広がり、肌のキメを整えて、次のステップのためのうるおいの土台をつくります。</p><dl class="spec"><dt><span class="l-en" lang="en">Key ingredients (draft)</span><span class="l-ko" lang="ko">주요 성분 (가안)</span><span class="l-fr" lang="fr">Ingrédients clés (provisoires)</span><span class="l-zh" lang="zh">主要成分（暂定）</span><span class="l-ja" lang="ja">主な成分（仮案）</span></dt><dd><span class="l-en" lang="en">Fermented rice filtrate · Panthenol</span><span class="l-ko" lang="ko">쌀 발효 여과물 · 판테놀</span><span class="l-fr" lang="fr">Filtrat de riz fermenté · Panthénol</span><span class="l-zh" lang="zh">米发酵滤液 · 泛醇</span><span class="l-ja" lang="ja">コメ発酵液 · パンテノール</span></dd><dt><span class="l-en" lang="en">How to use</span><span class="l-ko" lang="ko">사용법</span><span class="l-fr" lang="fr">Utilisation</span><span class="l-zh" lang="zh">使用方法</span><span class="l-ja" lang="ja">使い方</span></dt><dd><span class="l-en" lang="en">Press a few drops into clean skin with your palms.</span><span class="l-ko" lang="ko">세안 후 손바닥에 덜어 얼굴에 가볍게 눌러 주세요.</span><span class="l-fr" lang="fr">Après le nettoyage, pressez quelques gouttes sur le visage avec les paumes.</span><span class="l-zh" lang="zh">洁面后取适量于掌心，轻轻按压于面部。</span><span class="l-ja" lang="ja">洗顔後、手のひらに取り、顔にやさしく押さえるようになじませてください。</span></dd><dt><span class="l-en" lang="en">Category</span><span class="l-ko" lang="ko">분류</span><span class="l-fr" lang="fr">Catégorie</span><span class="l-zh" lang="zh">分类</span><span class="l-ja" lang="ja">分類</span></dt><dd><span class="l-en" lang="en">Planned as a functional cosmetic. Efficacy claims will appear only after MFDS review.</span><span class="l-ko" lang="ko">기능성화장품으로 개발 예정이에요. 효능 문구는 식약처 심사 후에만 표기해요.</span><span class="l-fr" lang="fr">Prévu comme cosmétique fonctionnel. Les allégations d’efficacité n’apparaîtront qu’après l’examen du MFDS coréen.</span><span class="l-zh" lang="zh">计划作为功能性化妆品开发。功效文案仅在韩国食药处审查通过后标注。</span><span class="l-ja" lang="ja">機能性化粧品として開発予定です。効能表示は韓国食薬処の審査後にのみ記載します。</span></dd></dl></div></article><article class="pdp" id="pdp-serum"><div class="pdp-vis"><svg viewBox="0 0 200 260" class="jar" aria-hidden="true"><defs><radialGradient id="g120" cx="38%" cy="40%" r="70%"><stop offset="0" stop-color="#3a3a3a"/><stop offset="1" stop-color="#1d1d1d"/></radialGradient></defs>
+<ellipse cx="100" cy="246" rx="62" ry="6" fill="#000" opacity=".5"/>
+<path d="M78 120 C 30 130, 28 236, 70 242 L130 242 C 172 236, 170 130, 122 120 Z" fill="url(#g120)" stroke="#3a3a3a"/>
+<rect x="80" y="86" width="40" height="34" rx="4" fill="#CDB58A"/>
+<path d="M84 94 h32 M84 102 h32 M84 110 h32" stroke="#141414" stroke-width="1" opacity=".35"/>
+<circle cx="100" cy="186.0" r="5" fill="#FF3D8B"/><path d="M120 98 q 26 10 22 48" fill="none" stroke="#CDB58A" stroke-width="1.5"/><circle cx="142" cy="148" r="4" fill="#B3263A"/><path d="M139 152 l-3 26 M142 152 l0 28 M145 152 l3 26" stroke="#B3263A" stroke-width="1.2"/></svg></div><div class="pdp-body"><span class="meta"><span class="l-en" lang="en">Step 2</span><span class="l-ko" lang="ko">2단계</span><span class="l-fr" lang="fr">Étape 2</span><span class="l-zh" lang="zh">第2步</span><span class="l-ja" lang="ja">ステップ2</span></span><h3 class="l-en" lang="en">Dawn Light Serum</h3><h3 class="l-ko" lang="ko">새벽빛 세럼</h3><h3 class="l-fr" lang="fr">Sérum Lumière d’Aube</h3><h3 class="l-zh" lang="zh">晨光精华</h3><h3 class="l-ja" lang="ja">ドーンライト セラム</h3><p class="pdp-hook l-en" lang="en">The glow of first light, in a few drops.</p><p class="pdp-hook l-ko" lang="ko">새벽의 첫 빛을 담은 몇 방울.</p><p class="pdp-hook l-fr" lang="fr">L’éclat de la première lumière, en quelques gouttes.</p><p class="pdp-hook l-zh" lang="zh">几滴之间，盛着清晨的第一缕光。</p><p class="pdp-hook l-ja" lang="ja">夜明けの最初の光を、数滴に。</p><p class="l-en" lang="en">A silky serum that spreads thin and sinks in without stickiness, for skin that looks clear and lit from within.</p><p class="l-ko" lang="ko">얇게 펴 발리고 끈적임 없이 스며드는 실키한 세럼이에요. 맑고 생기 있어 보이는 윤기를 더해요.</p><p class="l-fr" lang="fr">Un sérum soyeux qui s’étale finement et pénètre sans coller, pour une peau qui paraît claire et lumineuse.</p><p class="l-zh" lang="zh">丝滑精华薄薄推开、不黏腻，让肌肤看起来清透有光泽。</p><p class="l-ja" lang="ja">薄くのびてべたつかずになじむシルキーなセラム。澄んだ、生き生きとしたツヤ感を添えます。</p><dl class="spec"><dt><span class="l-en" lang="en">Key ingredients (draft)</span><span class="l-ko" lang="ko">주요 성분 (가안)</span><span class="l-fr" lang="fr">Ingrédients clés (provisoires)</span><span class="l-zh" lang="zh">主要成分（暂定）</span><span class="l-ja" lang="ja">主な成分（仮案）</span></dt><dd><span class="l-en" lang="en">Niacinamide · Centella asiatica extract</span><span class="l-ko" lang="ko">나이아신아마이드 · 병풀 추출물</span><span class="l-fr" lang="fr">Niacinamide · Extrait de Centella asiatica</span><span class="l-zh" lang="zh">烟酰胺 · 积雪草提取物</span><span class="l-ja" lang="ja">ナイアシンアミド · ツボクサエキス</span></dd><dt><span class="l-en" lang="en">How to use</span><span class="l-ko" lang="ko">사용법</span><span class="l-fr" lang="fr">Utilisation</span><span class="l-zh" lang="zh">使用方法</span><span class="l-ja" lang="ja">使い方</span></dt><dd><span class="l-en" lang="en">Warm 2–3 drops between fingertips and smooth over the face.</span><span class="l-ko" lang="ko">2~3방울을 손끝에 덜어 얼굴 전체에 부드럽게 펴 발라 주세요.</span><span class="l-fr" lang="fr">Réchauffez 2 à 3 gouttes entre les doigts et lissez sur le visage.</span><span class="l-zh" lang="zh">取2~3滴于指尖，均匀涂抹于全脸。</span><span class="l-ja" lang="ja">2〜3滴を指先に取り、顔全体にやさしくのばしてください。</span></dd><dt><span class="l-en" lang="en">Category</span><span class="l-ko" lang="ko">분류</span><span class="l-fr" lang="fr">Catégorie</span><span class="l-zh" lang="zh">分类</span><span class="l-ja" lang="ja">分類</span></dt><dd><span class="l-en" lang="en">Planned as a functional cosmetic. Efficacy claims will appear only after MFDS review.</span><span class="l-ko" lang="ko">기능성화장품으로 개발 예정이에요. 효능 문구는 식약처 심사 후에만 표기해요.</span><span class="l-fr" lang="fr">Prévu comme cosmétique fonctionnel. Les allégations d’efficacité n’apparaîtront qu’après l’examen du MFDS coréen.</span><span class="l-zh" lang="zh">计划作为功能性化妆品开发。功效文案仅在韩国食药处审查通过后标注。</span><span class="l-ja" lang="ja">機能性化粧品として開発予定です。効能表示は韓国食薬処の審査後にのみ記載します。</span></dd></dl></div></article><article class="pdp" id="pdp-cream"><div class="pdp-vis"><svg viewBox="0 0 200 260" class="jar" aria-hidden="true"><defs><radialGradient id="g96" cx="38%" cy="40%" r="70%"><stop offset="0" stop-color="#3a3a3a"/><stop offset="1" stop-color="#1d1d1d"/></radialGradient></defs>
+<ellipse cx="100" cy="246" rx="62" ry="6" fill="#000" opacity=".5"/>
+<path d="M78 144 C 30 154, 28 236, 70 242 L130 242 C 172 236, 170 154, 122 144 Z" fill="url(#g96)" stroke="#3a3a3a"/>
+<rect x="80" y="110" width="40" height="34" rx="4" fill="#CDB58A"/>
+<path d="M84 118 h32 M84 126 h32 M84 134 h32" stroke="#141414" stroke-width="1" opacity=".35"/>
+<circle cx="100" cy="196.8" r="5" fill="#B3263A"/><path d="M120 122 q 26 10 22 48" fill="none" stroke="#CDB58A" stroke-width="1.5"/><circle cx="142" cy="172" r="4" fill="#B3263A"/><path d="M139 176 l-3 26 M142 176 l0 28 M145 176 l3 26" stroke="#B3263A" stroke-width="1.2"/></svg></div><div class="pdp-body"><span class="meta"><span class="l-en" lang="en">Step 3</span><span class="l-ko" lang="ko">3단계</span><span class="l-fr" lang="fr">Étape 3</span><span class="l-zh" lang="zh">第3步</span><span class="l-ja" lang="ja">ステップ3</span></span><h3 class="l-en" lang="en">Dawn Veil Cream</h3><h3 class="l-ko" lang="ko">새벽 베일 크림</h3><h3 class="l-fr" lang="fr">Crème Voile d’Aube</h3><h3 class="l-zh" lang="zh">晨幕面霜</h3><h3 class="l-ja" lang="ja">ドーンヴェール クリーム</h3><p class="pdp-hook l-en" lang="en">A soft veil to close the ritual.</p><p class="pdp-hook l-ko" lang="ko">루틴을 감싸 마무리하는 부드러운 베일.</p><p class="pdp-hook l-fr" lang="fr">Un voile doux pour clore le rituel.</p><p class="pdp-hook l-zh" lang="zh">以一层柔软薄幕，为仪式收尾。</p><p class="pdp-hook l-ja" lang="ja">儀式をしめくくる、やわらかなヴェール。</p><p class="l-en" lang="en">A cushiony cream that wraps skin in a light, moisturizing finish without heaviness.</p><p class="l-ko" lang="ko">무겁지 않게 피부를 감싸는 쿠션감 있는 크림으로, 촉촉하게 마무리해요.</p><p class="l-fr" lang="fr">Une crème moelleuse qui enveloppe la peau d’un fini hydratant, sans lourdeur.</p><p class="l-zh" lang="zh">如软垫般的面霜轻柔包裹肌肤，带来不厚重的滋润收尾。</p><p class="l-ja" lang="ja">重さを感じさせずに肌を包み込む、クッションのようなクリームでしっとり仕上げます。</p><dl class="spec"><dt><span class="l-en" lang="en">Key ingredients (draft)</span><span class="l-ko" lang="ko">주요 성분 (가안)</span><span class="l-fr" lang="fr">Ingrédients clés (provisoires)</span><span class="l-zh" lang="zh">主要成分（暂定）</span><span class="l-ja" lang="ja">主な成分（仮案）</span></dt><dd><span class="l-en" lang="en">Ceramide NP · Squalane</span><span class="l-ko" lang="ko">세라마이드엔피 · 스쿠알란</span><span class="l-fr" lang="fr">Céramide NP · Squalane</span><span class="l-zh" lang="zh">神经酰胺NP · 角鲨烷</span><span class="l-ja" lang="ja">セラミドNP · スクワラン</span></dd><dt><span class="l-en" lang="en">How to use</span><span class="l-ko" lang="ko">사용법</span><span class="l-fr" lang="fr">Utilisation</span><span class="l-zh" lang="zh">使用方法</span><span class="l-ja" lang="ja">使い方</span></dt><dd><span class="l-en" lang="en">Finish with a pearl-sized amount, morning and night.</span><span class="l-ko" lang="ko">아침저녁 마지막 단계에 진주알 크기만큼 발라 주세요.</span><span class="l-fr" lang="fr">Terminez avec une noisette de crème, matin et soir.</span><span class="l-zh" lang="zh">早晚最后一步，取珍珠大小用量涂抹。</span><span class="l-ja" lang="ja">朝晩の最後に、パール粒大を目安になじませてください。</span></dd><dt><span class="l-en" lang="en">Category</span><span class="l-ko" lang="ko">분류</span><span class="l-fr" lang="fr">Catégorie</span><span class="l-zh" lang="zh">分类</span><span class="l-ja" lang="ja">分類</span></dt><dd><span class="l-en" lang="en">Planned as a functional cosmetic. Efficacy claims will appear only after MFDS review.</span><span class="l-ko" lang="ko">기능성화장품으로 개발 예정이에요. 효능 문구는 식약처 심사 후에만 표기해요.</span><span class="l-fr" lang="fr">Prévu comme cosmétique fonctionnel. Les allégations d’efficacité n’apparaîtront qu’après l’examen du MFDS coréen.</span><span class="l-zh" lang="zh">计划作为功能性化妆品开发。功效文案仅在韩国食药处审查通过后标注。</span><span class="l-ja" lang="ja">機能性化粧品として開発予定です。効能表示は韓国食薬処の審査後にのみ記載します。</span></dd></dl></div></article></div></section><section><div class="sh"><h2><span class="l-en" lang="en">Travel Minis · Hotel × Retail</span><span class="l-ko" lang="ko">트래블 미니 · 호텔 × 판매</span><span class="l-fr" lang="fr">Miniatures de voyage · Hôtel × Boutique</span><span class="l-zh" lang="zh">旅行小样 · 酒店 × 零售</span><span class="l-ja" lang="ja">トラベルミニ · ホテル × リテール</span></h2></div><p class="s-lead2 l-en" lang="en">Meet the scent in your hotel room first, then take the same ritual home.</p><p class="s-lead2 l-ko" lang="ko">호텔 객실에서 처음 만난 향을, 같은 루틴으로 집까지.</p><p class="s-lead2 l-fr" lang="fr">Découvrez le parfum dans votre chambre d’hôtel, puis emportez le même rituel chez vous.</p><p class="s-lead2 l-zh" lang="zh">先在酒店客房里邂逅这缕香气，再把同样的仪式带回家。</p><p class="s-lead2 l-ja" lang="ja">ホテルの客室で出会った香りを、同じリチュアルのまま家まで。</p><div class="tm"><div class="tm-col"><span class="h-k"><span class="l-en" lang="en">In the room</span><span class="l-ko" lang="ko">객실용</span><span class="l-fr" lang="fr">En chambre</span><span class="l-zh" lang="zh">客房内</span><span class="l-ja" lang="ja">客室で</span></span><ul><li><span class="l-en" lang="en">Shampoo · Conditioner · Body Wash · Body Lotion — 300 ml refill cartridges</span><span class="l-ko" lang="ko">샴푸·컨디셔너·바디워시·바디로션 — 300ml 리필 카트리지</span><span class="l-fr" lang="fr">Shampooing · Après-shampooing · Gel douche · Lait corps — recharges de 300 ml</span><span class="l-zh" lang="zh">洗发水 · 护发素 · 沐浴露 · 身体乳 — 300ml补充装</span><span class="l-ja" lang="ja">シャンプー・コンディショナー・ボディウォッシュ・ボディローション — 300mlリフィル</span></li><li><span class="l-en" lang="en">Matte black dispensers with champagne-gold engraving</span><span class="l-ko" lang="ko">블랙 무광 디스펜서, 샴페인 골드 각인</span><span class="l-fr" lang="fr">Distributeurs noir mat gravés or champagne</span><span class="l-zh" lang="zh">哑光黑色分装器，香槟金刻字</span><span class="l-ja" lang="ja">マットブラックのディスペンサー、シャンパンゴールドの刻印</span></li><li><span class="l-en" lang="en">Turndown: Dawn Light Serum 7 ml sample</span><span class="l-ko" lang="ko">턴다운: 새벽빛 세럼 7ml 샘플</span><span class="l-fr" lang="fr">Service de couverture : échantillon de 7 ml du Sérum Lumière d’Aube</span><span class="l-zh" lang="zh">夜床服务：晨光精华7ml小样</span><span class="l-ja" lang="ja">ターンダウン：ドーンライト セラム 7mlサンプル</span></li></ul></div><div class="tm-col"><span class="h-k"><span class="l-en" lang="en">To take home</span><span class="l-ko" lang="ko">판매용 키트</span><span class="l-fr" lang="fr">À emporter</span><span class="l-zh" lang="zh">带回家</span><span class="l-ja" lang="ja">お持ち帰り用キット</span></span><ul><li><span class="l-en" lang="en">Shampoo · Conditioner · Body Wash · Body Lotion — 50 ml each</span><span class="l-ko" lang="ko">샴푸·컨디셔너·바디워시·바디로션 — 각 50ml</span><span class="l-fr" lang="fr">Shampooing · Après-shampooing · Gel douche · Lait corps — 50 ml chacun</span><span class="l-zh" lang="zh">洗发水 · 护发素 · 沐浴露 · 身体乳 — 各50ml</span><span class="l-ja" lang="ja">シャンプー・コンディショナー・ボディウォッシュ・ボディローション — 各50ml</span></li><li><span class="l-en" lang="en">Dawn Light Serum — 15 ml</span><span class="l-ko" lang="ko">새벽빛 세럼 — 15ml</span><span class="l-fr" lang="fr">Sérum Lumière d’Aube — 15 ml</span><span class="l-zh" lang="zh">晨光精华 — 15ml</span><span class="l-ja" lang="ja">ドーンライト セラム — 15ml</span></li><li><span class="l-en" lang="en">Moon-jar mini bottles, pouch with norigae tassel</span><span class="l-ko" lang="ko">달항아리 미니 보틀, 노리개 태슬 파우치</span><span class="l-fr" lang="fr">Mini-flacons jarre lune, pochette à pompon norigae</span><span class="l-zh" lang="zh">月亮罐迷你瓶，附流苏收纳袋</span><span class="l-ja" lang="ja">月壺のミニボトル、ノリゲタッセル付きポーチ</span></li><li><span class="l-en" lang="en">All under 100 ml, ready for cabin baggage</span><span class="l-ko" lang="ko">모두 100ml 미만, 기내 반입 가능</span><span class="l-fr" lang="fr">Tous moins de 100 ml, prêts pour le bagage cabine</span><span class="l-zh" lang="zh">均小于100ml，可随身登机</span><span class="l-ja" lang="ja">すべて100ml未満、機内持ち込み可</span></li></ul></div></div><p class="note"><span class="l-en" lang="en">One signature scent and formula across both formats. Prices are not set.</span><span class="l-ko" lang="ko">두 규격 모두 같은 시그니처 향과 처방이에요. 가격은 정해지지 않았어요.</span><span class="l-fr" lang="fr">Un même parfum signature et une même formule pour les deux formats. Les prix ne sont pas fixés.</span><span class="l-zh" lang="zh">两种规格采用同一款招牌香气与配方。价格尚未确定。</span><span class="l-ja" lang="ja">どちらの規格も同じシグネチャーの香りと処方です。価格は未定です。</span></p></section><p class="disc"><span class="l-en" lang="en">SEOEN is a brand concept in development. Products shown here are not for sale, and names, ingredients and visuals may change.</span><span class="l-ko" lang="ko">SEOEN은 개발 중인 브랜드 기획안이에요. 이 페이지의 제품은 판매하지 않으며, 제품명·성분·이미지는 바뀔 수 있어요.</span><span class="l-fr" lang="fr">SEOEN est un concept de marque en développement. Les produits présentés ne sont pas en vente ; noms, ingrédients et visuels peuvent changer.</span><span class="l-zh" lang="zh">SEOEN是正在开发中的品牌企划。本页面产品不对外销售，产品名、成分与图像可能变更。</span><span class="l-ja" lang="ja">SEOENは開発中のブランド企画です。掲載製品は販売しておらず、製品名・成分・ビジュアルは変更される場合があります。</span></p></div></template>
+<main id="panels"><p class="empty" id="status">Loading…</p></main>
+<footer>SEOEN Journal · 瑞 + Énergie — 새벽빛에서 얻는 상서로운 에너지</footer>
+</div>
+
+
+<script>
+(function(){
+ var TABS=['seoen','news','mag','retail','econ','macro','stocks','ingredients','makers','marketing','product','ra','english'];
+ var main=document.getElementById('panels'),issues=[],mom=[],econ=[],retail=[],cache={};
+ function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+ function parse(){var h=decodeURIComponent(location.hash.slice(1));if(h==='archive')return{archive:true};
+  var m=h.match(/^(\d{4}-\d{2}-\d{2})(?:-([a-z]+))?$/);if(m)return{date:m[1],tab:TABS.indexOf(m[2])>=0?m[2]:'news'};
+  return{date:null,tab:TABS.indexOf(h)>=0?h:'news'}}
+ function setNav(tab,date){document.querySelectorAll('.tabs a').forEach(function(a){var t=a.dataset.t;
+  a.href='#'+(t==='archive'||t==='seoen'||t==='retail'?t:(date&&issues.length&&date!==issues[0].date?date+'-'+t:t));
+  if(t===tab){a.setAttribute('aria-current','page');a.scrollIntoView({block:'nearest',inline:'center'})}else a.removeAttribute('aria-current')})}
+ function get(u){if(cache[u])return Promise.resolve(cache[u]);return fetch(u,{cache:'no-cache'}).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(t){cache[u]=t;return t})}
+ function archive(){document.getElementById('issueNo').textContent=issues.length+' issues';setNav('archive');
+  main.innerHTML='<div class="panel"><section><div class="sh"><h2>Archive</h2><small>지난 호</small></div><div class="issues">'+issues.map(function(i){var d=new Date(i.date+'T00:00:00');
+  return '<a class="issue" href="#'+i.date+'-news"><span class="m">'+esc(i.weekday)+' · '+d.toLocaleString('en-US',{month:'short'})+' '+i.date.slice(0,4)+'</span><span class="d">'+i.date.slice(8)+'</span><span class="h"><span class="l-en">'+esc(i.headline)+'</span><span class="l-ko">'+esc(i.headline_ko||i.headline)+'</span></span></a>'}).join('')+'</div></section></div>'}
+ function flagify(root){root=root||main;
+  var F=[['🇰🇷',['korea','south korea','한국','국내','kr']],['🇺🇸',['u.s.','us','usa','united states','미국']],['🇬🇧',['uk','u.k.','united kingdom','britain','영국']],['🇪🇺',['europe','eu','유럽']],
+   ['🇯🇵',['japan','일본','jp']],['🇨🇳',['china','중국','cn']],['🇫🇷',['france','프랑스']],['🇦🇪',['uae','dubai','두바이','아랍에미리트']],['🇸🇬',['singapore','싱가포르']],['🇨🇦',['canada','캐나다']],
+   ['🇲🇽',['mexico','멕시코']],['🇧🇷',['brazil','브라질']],['🇹🇭',['thailand','태국']],['🇻🇳',['vietnam','베트남']],['🇮🇩',['indonesia','인도네시아']],['🇦🇺',['australia','호주']],['🇮🇹',['italy','이탈리아']],
+   ['🌎',['north america','북미','latin america','중남미','latam','americas']],['🌏',['asean','southeast asia','동남아','asia','아시아']],['🌍',['middle east','중동']],['🌐',['global','글로벌','worldwide']]];
+  function hit(seg){var t=seg.trim().toLowerCase();if(!t)return null;for(var i=0;i<F.length;i++)for(var j=0;j<F[i][1].length;j++){var c=F[i][1][j];if(t===c||t.indexOf(c+' ')===0)return F[i][0]}return null}
+  root.querySelectorAll('.meta,.th .src,.rg,.qm,.hb .lb span,.mini td:first-child span,.kpi .k span').forEach(function(el){if(el.dataset.flg)return;el.dataset.flg='1';
+   var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),ns=[];while(w.nextNode())ns.push(w.currentNode);
+   ns.forEach(function(n){var parts=n.nodeValue.split(/(\s*[·—→\/,()]\s*)/),ch=false,fr=document.createDocumentFragment();
+    parts.forEach(function(pt,k){var f=(k%2===0)?hit(pt):null;if(f){var lead=pt.match(/^\s*/)[0];if(lead)fr.appendChild(document.createTextNode(lead));var sp=document.createElement('span');sp.className='flg';sp.textContent=f;sp.setAttribute('aria-hidden','true');fr.appendChild(sp);fr.appendChild(document.createTextNode(pt.slice(lead.length)));ch=true}else fr.appendChild(document.createTextNode(pt))});
+    if(ch)n.parentNode.replaceChild(fr,n)})});
+  // retail channel chips
+  var RF={tiktok:'🇺🇸',amazon:'🇺🇸',oliveyoung:'🇰🇷',hwahae:'🇰🇷',ulta:'🇺🇸',all:'🌐'};
+  root.querySelectorAll('.retail .chips button').forEach(function(b){if(b.querySelector('.flg'))return;var f=RF[b.dataset.f];if(f)b.insertAdjacentHTML('afterbegin','<span class="flg" aria-hidden="true">'+f+'</span>')});
+  // marketing: country filter chips
+  var mk=root.querySelector('.panel[data-p="marketing"] section');if(mk&&!mk.querySelector('.chips')){var seen=[],cards=mk.querySelectorAll('article.card');
+   cards.forEach(function(a){var m=a.querySelector('.meta');if(!m)return;var first=(m.textContent.split(/[·—→\/,()]/)[0]||'').replace(/[\u{1F1E6}-\u{1F1FF}\u{1F30E}-\u{1F310}]/gu,'').trim();var f=hit(first);var code=first.toLowerCase().replace(/[^a-z가-힣]+/g,'')||'other';a.dataset.sub=code;
+    if(!seen.some(function(x){return x.code===code}))seen.push({code:code,label:first,flag:f})});
+   if(seen.length){var h='<div class="chips" role="group" aria-label="Country / 국가"><button data-f="all" aria-pressed="true"><span class="flg" aria-hidden="true">🌐</span>All</button>'+seen.map(function(x){return '<button data-f="'+x.code+'" aria-pressed="false">'+(x.flag?'<span class="flg" aria-hidden="true">'+x.flag+'</span>':'')+x.label.replace(/</g,'&lt;')+'</button>'}).join('')+'</div>';
+    var sh=mk.querySelector('.sh');if(sh)sh.insertAdjacentHTML('afterend',h)}}
+ }
+ function quickLook(root){root=root||main;var PAL=[['255,61,139','205,181,138'],['205,181,138','179,38,58'],['179,38,58','245,240,230'],['245,240,230','255,61,139']];
+  function txt(el){return el?el.textContent.replace(/\s+/g,' ').trim():''}
+  function pair(en,ko){var e=document.createElement('span');e.className='l-en';e.textContent=en;var k=document.createElement('span');k.className='l-ko';k.textContent=ko||en;return [e,k]}
+  function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+  function bi(en,ko){return '<span class="l-en">'+esc(en)+'</span><span class="l-ko">'+esc(ko||en)+'</span>'}
+  root.querySelectorAll('.panel').forEach(function(pn){var key=pn.dataset.p;if(!key||key==='macro'||key==='seoen'||pn.querySelector(':scope > .qk'))return;var it=[];
+   function add(o){if(it.length<4&&o.en)it.push(o)}
+   pn.querySelectorAll('.top3 .t').forEach(function(t){var h=t.querySelectorAll('h3');var pe=t.querySelector('p.en'),pk=t.querySelector('p.kot');
+     add({el:t,n:txt(t.querySelector('.n')),kw:'',en:h[0]?txt(h[0]):txt(pe),ko:h[1]?txt(h[1]):txt(pk),m:''})});
+   if(key==='stocks'){var tb=pn.querySelector('.tbl tbody');if(tb)tb.querySelectorAll('tr').forEach(function(r){var c=r.children;if(c.length<3)return;var ch=txt(c[2].querySelector('.l-en')||c[2]),cK=txt(c[2].querySelector('.l-ko')||c[2]);
+     add({el:r,kw:ch,kwko:cK,en:txt(c[0].querySelector('.l-en')||c[0])+' · '+txt(c[1].querySelector('.l-en')||c[1]),ko:txt(c[0].querySelector('.l-ko')||c[0])+' · '+txt(c[1].querySelector('.l-ko')||c[1]),m:txt(c[3].querySelector('.l-ko')||c[3])})})}
+   if(key==='english'){pn.querySelectorAll('.card.w').forEach(function(w){add({el:w,kw:txt(w.querySelector('.term')),en:txt(w.querySelector('.ex')),ko:txt(w.querySelector('.kr')),m:txt(w.querySelector('.pos'))})})}
+   if(key==='retail'){pn.querySelectorAll('.ch').forEach(function(c){var r=c.querySelector('.rk:not(.gap)');if(!r)return;var nm=txt(c.querySelector('.ch-h h3'));
+     add({el:c,kw:nm,en:'#1 '+txt(r.querySelector('.br'))+' — '+txt(r.querySelector('h4')),ko:'1위 '+txt(r.querySelector('.br'))+' — '+txt(r.querySelector('h4')),m:txt(c.querySelector('.bs .l-ko'))})})}
+   if(!it.length||key==='news'){pn.querySelectorAll('article.card,.ecard').forEach(function(a){if(a.classList.contains('w'))return;var h=a.querySelectorAll('h3');var th=a.querySelector('.th');
+     var en=h[0]?txt(h[0].classList.contains('l-ko')?h[1]:h[0]):'',ko=h[0]?txt(h[0].classList.contains('l-ko')?h[0]:(h[1]||h[0])):'';
+     if(!en){var se=a.querySelector('.l-en'),sk=a.querySelector('.l-ko');en=txt(se);ko=txt(sk)}
+     add({el:a,kw:txt(a.querySelector('.kw')),en:en,ko:ko,m:txt(a.querySelector('.meta')),st:th?th.getAttribute('style'):''})})}
+   if(!it.length)return;
+   var html='<div class="qk" role="region" aria-label="Quick look / 30초 브리핑"><div class="qk-h"><h2>'+bi('Quick Look','30초 브리핑')+'</h2><small>'+bi('The '+it.length+' things to know','먼저 볼 '+it.length+'가지')+'</small></div><div class="qk-row">';
+   it.forEach(function(o,i){var c=PAL[i%4];var st=o.st||('--c1:'+c[0]+';--c2:'+c[1]+';--x1:'+(20+i*17)+'%;--y1:'+(30+i*9)+'%;--x2:'+(78-i*11)+'%;--y2:'+(70-i*8)+'%');
+    html+='<button type="button" class="qkc" data-i="'+i+'"><div class="th" style="'+esc(st)+'" aria-hidden="true"><span class="qn">0'+(i+1)+'</span><div class="ov"><span class="kw">'+(o.kwko?bi(o.kw,o.kwko):esc(o.kw||(o.n?'TOP '+o.n:'')))+'</span></div></div><div class="qb"><span class="qt">'+bi(o.en,o.ko)+'</span>'+(o.m?'<span class="qm">'+esc(o.m)+'</span>':'')+'</div></button>'});
+   html+='</div></div>';pn.insertAdjacentHTML('afterbegin',html);var q=pn.firstElementChild;
+   q.querySelectorAll('.qkc').forEach(function(b){b.addEventListener('click',function(){var t=it[+b.dataset.i].el;t.scrollIntoView({behavior:'smooth',block:'center'});t.classList.add('qk-hit');setTimeout(function(){t.classList.remove('qk-hit')},1600)})})});
+  if(window.fb)fb()}
+ function marquee(){var G='https://www.google.com/search?q=';
+  var L=[['ODM','COSMAX','코스맥스','https://www.cosmax.com/'],['RAW','BASF','바스프','https://www.basf.com/'],['PKG','Yonwoo','연우',G+encodeURIComponent('연우 화장품 용기')],
+  ['ODM','Kolmar Korea','한국콜마','https://www.kolmar.co.kr/'],['RAW','dsm-firmenich','디에스엠-피르메니히','https://www.dsm-firmenich.com/'],['PKG','Pum-Tech Korea','펌텍코리아',G+encodeURIComponent('펌텍코리아')],
+  ['ODM','Cosmecca Korea','코스메카코리아','https://www.cosmecca.com/'],['RAW','Hyundai Bioland','현대바이오랜드','https://www.hyundaibioland.co.kr/'],['PKG','Luxpack Korea','럭스팩코리아',G+encodeURIComponent('럭스팩코리아 화장품 용기')],
+  ['ODM','C&C International','씨앤씨인터내셔널','https://www.cnccosmetic.com/'],['RAW','Croda','크로다','https://www.croda.com/'],['PKG','Aptar','앱타','https://www.aptar.com/'],
+  ['RAW','Daebong LS','대봉엘에스',G+encodeURIComponent('대봉엘에스 화장품 원료')],['RAW','Givaudan','지보단','https://www.givaudan.com/'],['PKG','Quadpack','쿼드팩','https://www.quadpack.com/'],
+  ['RAW','Symrise','심라이즈','https://www.symrise.com/'],['RAW','Evonik','에보닉','https://www.evonik.com/']];
+  function chip(x,h){return '<a href="'+x[3]+'" target="_blank" rel="noopener"'+(h?' aria-hidden="true" tabindex="-1"':'')+'><span class="badge b-'+x[0].toLowerCase()+'">'+x[0]+'</span><span class="wm">'+x[1].replace(/&/g,'&amp;')+'</span><span class="kr">'+x[2]+'</span></a>'}
+  var one=L.map(function(x){return chip(x,false)}).join(''),two=L.map(function(x){return chip(x,true)}).join('');
+  var D={ODM:['Cosmetics ODM · formulation to production','화장품 ODM · 처방 개발부터 생산까지'],RAW:['Cosmetic ingredients &amp; raw materials','화장품 원료 공급'],PKG:['Cosmetic packaging &amp; containers','화장품 용기·패키징']};
+  var slides=L.map(function(x,i){return '<a class="sp-s'+(i?'':' on')+'" href="'+x[3]+'" target="_blank" rel="noopener"'+(i?' tabindex="-1" aria-hidden="true"':'')+'><span class="badge b-'+x[0].toLowerCase()+'">'+x[0]+'</span><span class="sp-n">'+x[1].replace(/&/g,'&amp;')+'</span><span class="sp-k">'+x[2]+'</span><span class="sp-d"><span class="l-en">'+D[x[0]][0]+'</span><span class="l-ko">'+D[x[0]][1]+'</span></span><span class="sp-go">↗</span></a>'}).join('');
+  var dots=L.map(function(x,i){return '<i'+(i?'':' class="on"')+'></i>'}).join('');
+  return '<div class="mq sp" role="region" aria-roledescription="carousel" aria-label="Industry spotlight / 업계 주요 회사"><div class="mq-h"><span><span class="l-en">Industry spotlight</span><span class="l-ko">업계 스포트라이트</span></span><span class="sp-tag"><span class="l-en">Not sponsored</span><span class="l-ko">광고·후원 아님</span></span></div><div class="sp-stage" aria-live="off">'+slides+'</div><div class="sp-foot"><div class="sp-dots" aria-hidden="true">'+dots+'</div><button type="button" class="sp-tog" aria-expanded="false"><span class="l-en">All companies</span><span class="l-ko">전체 회사 보기</span> <b>▾</b></button></div><div class="mq-win" hidden><div class="mq-track">'+one+two+'</div></div></div>'}
+ function addMarquee(){['makers','ingredients'].forEach(function(k){var pn=main.querySelector('.panel[data-p="'+k+'"]');if(!pn||pn.querySelector('.mq'))return;pn.insertAdjacentHTML('afterbegin',marquee());var m=pn.firstElementChild,ss=m.querySelectorAll('.sp-s'),ds=m.querySelectorAll('.sp-dots i'),i=0,hold=false;
+   function go(n){ss[i].classList.remove('on');ss[i].setAttribute('tabindex','-1');ss[i].setAttribute('aria-hidden','true');ds[i].classList.remove('on');i=(n+ss.length)%ss.length;ss[i].classList.add('on');ss[i].removeAttribute('tabindex');ss[i].removeAttribute('aria-hidden');ds[i].classList.add('on')}
+   var red=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+   var tm=setInterval(function(){if(!document.body.contains(m)){clearInterval(tm);return}if(!hold&&!red&&!pn.hidden)go(i+1)},3200);
+   m.addEventListener('mouseenter',function(){hold=true});m.addEventListener('mouseleave',function(){hold=false});m.addEventListener('focusin',function(){hold=true});m.addEventListener('focusout',function(){hold=false});
+   ds.forEach(function(d,n){d.addEventListener('click',function(){go(n)})});
+   var tg=m.querySelector('.sp-tog'),w=m.querySelector('.mq-win');tg.addEventListener('click',function(){var o=w.hidden;w.hidden=!o;tg.setAttribute('aria-expanded',String(o));tg.querySelector('b').textContent=o?'▴':'▾'})});if(window.fb)fb()}
+ function linkCovers(){main.querySelectorAll('article.card').forEach(function(c){var th=c.querySelector(':scope > .th'),rd=c.querySelector('a.read');if(!th||!rd)return;
+  var a=document.createElement('a');a.className='thl';a.href=rd.href;a.target='_blank';a.rel='noopener';var t=(c.querySelector('h3')||{}).textContent||'';a.setAttribute('aria-label','Open article / 원문 기사 보기: '+t);
+  th.parentNode.insertBefore(a,th);a.appendChild(th);a.insertAdjacentHTML('beforeend','<span class="go" aria-hidden="true">↗</span>')})}
+ function show(){var s=parse();if(s.archive)return archive();
+  if(s.tab==='seoen'&&!s.date){document.getElementById('issueNo').textContent='SEOEN · Brand';setNav('seoen');main.innerHTML=document.getElementById('tpl-seoen').innerHTML;fb();return}
+  if(s.tab==='retail'){setNav('retail');var k=s.date?retail.findIndex(function(x){return x.date===s.date}):0;if(k<0)k=0;var rr=retail[k];
+   if(!rr){document.getElementById('issueNo').textContent='Retail Rank';main.innerHTML='<p class="empty">No retail issue yet.</p>';return}
+   document.getElementById('issueNo').textContent='Retail Rank · No. '+String(retail.length-k).padStart(3,'0')+' · '+rr.date;
+   get('retail/'+rr.date+'.html').then(function(h){main.innerHTML=h;flagify();quickLook();flagify();fb();var pv=retail[k+1],nx=retail[k-1];
+    main.insertAdjacentHTML('beforeend','<nav class="pager">'+(pv?'<a href="#'+pv.date+'-retail">← '+pv.date+'</a>':'<span></span>')+'<span>Weekly</span>'+(nx?'<a href="#'+nx.date+'-retail">'+nx.date+' →</a>':'<span></span>')+'</nav>')})
+   .catch(function(){main.innerHTML='<p class="empty">이 호를 불러오지 못했어요. 새로고침해 주세요.</p>'});return}
+  var idx=s.date?issues.findIndex(function(i){return i.date===s.date}):0;if(idx<0)idx=0;var it=issues[idx];if(!it){main.innerHTML='<p class="empty">No issues yet.</p>';return}
+  var d=new Date(it.date+'T00:00:00');document.getElementById('issueNo').textContent='Issue No. '+String(issues.length-idx).padStart(3,'0')+' · '+it.weekday+' '+it.date.slice(8)+' '+d.toLocaleString('en-US',{month:'short'})+' '+it.date.slice(0,4);
+  setNav(s.tab,it.date);
+  get('issues/'+it.date+'.html').then(function(html){main.innerHTML=html;linkCovers();flagify();quickLook();addMarquee();flagify();
+   main.querySelectorAll('.panel').forEach(function(p){p.hidden=p.dataset.p!==s.tab});fb();
+   var prev=issues[idx+1],next=issues[idx-1];
+   main.insertAdjacentHTML('beforeend','<nav class="pager">'+(prev?'<a href="#'+prev.date+'-'+s.tab+'">← '+prev.date+'</a>':'<span></span>')+'<a href="#archive">All issues</a>'+(next?'<a href="#'+next.date+'-'+s.tab+'">'+next.date+' →</a>':'<span></span>')+'</nav>');
+   var m=mom.filter(function(x){return x.date<=it.date})[0];var slot=main.querySelector('[data-p="stocks"] .mom-slot');
+   if(m&&slot)get('momentum/'+m.date+'.html').then(function(h){slot.innerHTML=h;fb()}).catch(function(){});var ec=econ.filter(function(x){return x.date<=it.date})[0],es=main.querySelector('.econ-slot');if(ec&&es)get('econ/'+ec.date+'.html').then(function(h){es.outerHTML=h;flagify();quickLook();flagify();fb()}).catch(function(){});
+  }).catch(function(){main.innerHTML='<p class="empty">이 호를 불러오지 못했어요. 새로고침해 주세요.</p>'})}
+ Promise.all([fetch('issues/index.json',{cache:'no-cache'}).then(function(r){return r.json()}),fetch('momentum/index.json',{cache:'no-cache'}).then(function(r){return r.json()}).catch(function(){return[]}),fetch('econ/index.json',{cache:'no-cache'}).then(function(r){return r.json()}).catch(function(){return[]}),fetch('retail/index.json',{cache:'no-cache'}).then(function(r){return r.json()}).catch(function(){return[]})])
+ .then(function(r){issues=r[0].sort(function(a,b){return b.date.localeCompare(a.date)});mom=r[1].sort(function(a,b){return b.date.localeCompare(a.date)});econ=(r[2]||[]).sort(function(a,b){return b.date.localeCompare(a.date)});retail=(r[3]||[]).sort(function(a,b){return b.date.localeCompare(a.date)});show()})
+ .catch(function(){main.innerHTML='<p class="empty">목록을 불러오지 못했어요.</p>'});
+ window.addEventListener('hashchange',function(){show();var t=document.querySelector('.tabs');window.scrollTo(0,Math.max(0,t.offsetTop-80))});
+})();
+</script>
+<script>
+(function(){
+ var root=document.documentElement;
+ window.fb=function(){var m=root.getAttribute('data-mode');document.querySelectorAll('.l-en').forEach(function(el){
+  if(['fr','zh','ja'].indexOf(m)<0){el.classList.remove('keep');return}
+  var n=el.nextElementSibling,has=false;while(n&&/(^| )l-(ko|fr|zh|ja)( |$)/.test(n.className)){if(n.classList.contains('l-'+m)){has=true;break}n=n.nextElementSibling}
+  el.classList.toggle('keep',!has)})};
+ var btns=document.querySelectorAll('.toggle button');
+ function set(m,save){root.setAttribute('data-mode',m);root.lang=m==='both'?'ko':m;btns.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.m===m?'true':'false')});fb();if(save){try{localStorage.setItem('dbb-mode',m)}catch(e){}}}
+ var saved=null;try{saved=localStorage.getItem('dbb-mode')}catch(e){}
+ var l=String((navigator.languages&&navigator.languages[0])||navigator.language||'en').toLowerCase().slice(0,2);
+ set(saved||(['ko','fr','zh','ja'].indexOf(l)>=0?l:'en'),false);
+ btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.m,true)})});
+ document.addEventListener('click',function(ev){var b=ev.target.closest('.chips button');if(!b)return;var sec=b.closest('section');
+  sec.querySelectorAll('.chips button').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+  var f=b.dataset.f;sec.querySelectorAll('[data-sub]').forEach(function(c){c.hidden=!(f==='all'||c.dataset.sub===f)})});
+})();
+</script>
+<script>
+(function(){
+ var root=document.documentElement,b=document.getElementById('themeBtn');
+ function ap(t,save){if(['dark','light','pink','sky'].indexOf(t)<0)t='dark';root.setAttribute('data-theme',t);b.querySelector('.ic-dark').hidden=t!=='dark';b.querySelector('.ic-pink').hidden=t!=='light';b.querySelector('.ic-sky').hidden=t!=='pink';b.querySelector('.ic-light').hidden=t!=='sky';
+  var mc=document.querySelector('meta[name=theme-color]');if(mc)mc.content={dark:'#141619',light:'#F3EFE8',pink:'#F5E1E8',sky:'#C9DFEE'}[t];if(save){try{localStorage.setItem('dbb-theme',t)}catch(e){}}}
+ var t=null;try{t=localStorage.getItem('dbb-theme')}catch(e){}
+ ap(t||'dark',false);
+ b.addEventListener('click',function(){var c=root.getAttribute('data-theme');ap({dark:'light',light:'pink',pink:'sky',sky:'dark'}[c]||'dark',true)});
+ document.getElementById('exitBtn').addEventListener('click',function(){
+  var h=location.hash.slice(1);
+  if(h&&h!=='news'){location.hash='news';window.scrollTo(0,0);return}
+  var ext=document.referrer&&document.referrer.indexOf(location.host)<0;
+  if(ext&&history.length>1){history.back();return}
+  window.close();
+  setTimeout(function(){window.scrollTo({top:0,behavior:'smooth'})},150);
+ });
+})();
+</script>
+
+<script>
+(function(){
+ var root=document.documentElement,pick=document.getElementById('wallPick'),btn=document.getElementById('themeBtn');
+ var KEYS=['--wallbg','--bg','--m1','--m2','--m3','--panel','--glass','--card-hi','--card-lo','--line','--pastel'];
+ function hex2rgb(h){h=h.replace('#','');return[parseInt(h.substr(0,2),16),parseInt(h.substr(2,2),16),parseInt(h.substr(4,2),16)]}
+ function mix(a,b,t){return'rgb('+a.map(function(v,i){return Math.round(v*(1-t)+b[i]*t)}).join(',')+')'}
+ function rgba(a,al){return'rgba('+a.join(',')+','+al+')'}
+ function clear(){KEYS.forEach(function(k){root.style.removeProperty(k)})}
+ function apply(h,save){var c=hex2rgb(h),L=(0.2126*c[0]+0.7152*c[1]+0.0722*c[2])/255,dark=L<0.5;
+  root.setAttribute('data-theme',dark?'dark':'light');
+  var W=[255,255,255],K=[14,15,17];
+  var v={'--wallbg':h,'--m1':mix(c,W,.25),'--m2':mix(c,K,.12),'--m3':mix(c,W,.12),
+   '--panel':dark?rgba(hex2rgb('#000000').map(function(x,i){return Math.round(c[i]*.35)}),.9):rgba(c.map(function(x){return Math.round(x+(255-x)*.85)}),.93),
+   '--card-hi':dark?mix(c,K,.6):'#FFFFFF','--card-lo':dark?mix(c,K,.75):mix(c,W,.8),'--line':dark?mix(c,K,.55):mix(c,W,.55)};
+  v['--bg']=v['--m3'];v['--glass']=v['--panel'];
+  Object.keys(v).forEach(function(k){root.style.setProperty(k,v[k])});
+  var mc=document.querySelector('meta[name=theme-color]');if(mc)mc.content=h;
+  if(save){try{localStorage.setItem('dbb-wall',h)}catch(e){}}}
+ pick.addEventListener('input',function(){apply(pick.value,true)});
+ btn.addEventListener('click',function(){clear();try{localStorage.removeItem('dbb-wall')}catch(e){}},true);
+ var w=null;try{w=localStorage.getItem('dbb-wall')}catch(e){}
+ if(w&&/^#[0-9a-fA-F]{6}$/.test(w)){pick.value=w;apply(w,false)}
+})();
+</script>
+</body>
+</html>
