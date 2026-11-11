@@ -469,6 +469,34 @@ a.thl:hover .th .art,a.thl:focus-visible .th .art{transform:translateY(-3px);tra
 .cn p{margin:0}
 .fr-soon{background:var(--card);border-radius:4px;padding:40px 24px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px}
 .fr-soon svg{height:120px;fill:none;stroke:var(--accent);stroke-width:1.15}
+/* ===== Editorial Monthly (VOGUE · ELLE) ===== */
+.ed-wrap{display:flex;flex-direction:column;gap:22px;margin-bottom:12px}
+.ed-wrap .chips{justify-content:center}
+.ed-issue{background:var(--card);border-radius:4px;overflow:hidden;display:grid;grid-template-columns:1fr;min-width:0}
+@media (min-width:640px){.ed-issue{grid-template-columns:38% minmax(0,1fr)}}
+.ed-cover{position:relative;aspect-ratio:3/4;color:var(--cv-line);display:flex;flex-direction:column;justify-content:space-between;padding:28px 26px;
+  background:radial-gradient(110% 80% at 30% 22%,rgba(var(--t,205,181,138),.16),transparent 64%),var(--cv-bg)}
+@media (min-width:640px){.ed-issue .ed-cover{aspect-ratio:auto;min-height:100%}}
+.ed-cover::before{content:"";position:absolute;inset:12px;border:1px solid currentColor;opacity:.32}
+.ed-cover .art{position:absolute;right:12%;top:26%;height:40%;fill:none;stroke:currentColor;stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round;opacity:.9}
+.ed-cover .art *{vector-effect:non-scaling-stroke}
+.ed-ed{position:relative;font-family:var(--display);font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:var(--cv-ink)}
+.ed-mo{position:relative;font-family:var(--display);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--cv-line);margin-top:6px}
+.ed-star{position:relative;font-family:"Playfair Display",Georgia,"Noto Sans KR",serif;font-style:italic;font-size:clamp(24px,5vw,30px);line-height:1.08;color:var(--cv-ink);max-width:70%}
+.ed-lines{position:relative;list-style:none;margin:10px 0 0;padding:0;display:grid;gap:3px;font-size:11px;letter-spacing:.06em;color:var(--cv-ink);opacity:.8;max-width:72%}
+.ed-body{padding:24px 22px 22px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.ed-body h3{font-family:"Playfair Display",Georgia,"Noto Sans KR",serif;font-weight:700;font-size:clamp(22px,5vw,28px);line-height:1.1;margin:0}
+.ed-meta{font-size:12px;color:var(--muted);letter-spacing:.04em;margin-top:-8px}
+.ed-block{border-top:1px solid var(--line);padding-top:14px;display:flex;flex-direction:column;gap:8px}
+.ed-block h4{margin:0;font-family:var(--display);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)}
+.ed-credits{display:flex;flex-wrap:wrap;gap:2px 16px;margin:0;font-size:12.5px}
+.ed-credits div{display:flex;gap:6px}.ed-credits dt{color:var(--muted)}.ed-credits dd{margin:0}
+.ed-points,.ed-picks{margin:0;padding-left:18px;display:grid;gap:6px;font-size:14px}
+.ed-picks b{font-weight:600}
+.ed-links{display:flex;flex-wrap:wrap;gap:6px 16px}
+.ed-past{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;font-family:var(--display);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.ed-past button{font:inherit;background:none;border:1px solid var(--line);border-radius:999px;color:var(--muted);padding:6px 12px;cursor:pointer}
+.ed-past button[aria-pressed="true"]{border-color:var(--accent);color:var(--fg)}
 </style>
 </head>
 <body>
@@ -520,7 +548,7 @@ a.thl:hover .th .art,a.thl:focus-visible .th .art{transform:translateY(-3px);tra
 <script>
 (function(){
  var TABS=['seoen','news','mag','fragrance','retail','econ','macro','stocks','ingredients','makers','marketing','product','ra','english'];
- var main=document.getElementById('panels'),issues=[],mom=[],econ=[],retail=[],fragrance=[],cache={};
+ var main=document.getElementById('panels'),issues=[],mom=[],econ=[],retail=[],fragrance=[],editorial=[],cache={};
  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
  function parse(){var h=decodeURIComponent(location.hash.slice(1));if(h==='archive')return{archive:true};
   var m=h.match(/^(\d{4}-\d{2}-\d{2})(?:-([a-z]+))?$/);if(m)return{date:m[1],tab:TABS.indexOf(m[2])>=0?m[2]:'news'};
@@ -602,6 +630,7 @@ a.thl:hover .th .art,a.thl:focus-visible .th .art{transform:translateY(-3px);tra
  function linkCovers(){main.querySelectorAll('article.card').forEach(function(c){var th=c.querySelector(':scope > .th'),rd=c.querySelector('a.read');if(!th||!rd)return;
   var a=document.createElement('a');a.className='thl';a.href=rd.href;a.target='_blank';a.rel='noopener';var t=(c.querySelector('h3')||{}).textContent||'';a.setAttribute('aria-label','Open article / 원문 기사 보기: '+t);
   th.parentNode.insertBefore(a,th);a.appendChild(th);a.insertAdjacentHTML('beforeend','<span class="go" aria-hidden="true">↗</span>')})}
+ function edInject(date){var pn=main.querySelector('.panel[data-p="mag"]');if(!pn||!editorial.length||pn.querySelector('.ed-wrap'))return;var pick=editorial.filter(function(x){return x.date<=date})[0]||editorial[editorial.length-1];var nav=editorial.slice(0,12).map(function(x){return '<button type="button" data-d="'+x.date+'" aria-pressed="'+(x===pick)+'">'+esc(x.label||x.date.slice(0,7))+'</button>'}).join('');pn.insertAdjacentHTML('afterbegin','<div class="ed-wrap"><div class="ed-slot"></div>'+(editorial.length>1?'<nav class="ed-past" aria-label="Past editions / 지난 호">'+nav+'</nav>':'')+'</div>');var w=pn.firstElementChild,slot=w.querySelector('.ed-slot');function load(d){get('editorial/'+d+'.html').then(function(h){slot.innerHTML=h;flagify();fb()}).catch(function(){slot.innerHTML='<p class="empty">Editorial을 불러오지 못했어요.</p>'})}load(pick.date);w.querySelectorAll('.ed-past button').forEach(function(b){b.addEventListener('click',function(){w.querySelectorAll('.ed-past button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});load(b.dataset.d)})})}
  function show(){var s=parse();if(s.archive)return archive();
   if(s.tab==='seoen'&&!s.date){document.getElementById('issueNo').textContent='SEOEN · Brand';setNav('seoen');main.innerHTML=document.getElementById('tpl-seoen').innerHTML;fb();return}
   if(s.tab==='fragrance'){setNav('fragrance');var fk=s.date?fragrance.findIndex(function(x){return x.date===s.date}):0;if(fk<0)fk=0;var fr=fragrance[fk];if(!fr){document.getElementById('issueNo').textContent='Fragrance · Lookbook';main.innerHTML='<div class="panel" data-p="fragrance"><section class="fragrance"><div class="fr-soon">'+window.fragranceSoon()+'<span class="fr-kick">Fragrance Lookbook</span><p class="fr-dek"><span class="l-en">The first weekly lookbook arrives on Saturday morning.</span><span class="l-ko">첫 주간 룩북은 토요일 오전에 발행돼요.</span></p></div></section></div>';fb();return}document.getElementById('issueNo').textContent='Fragrance · Vol. '+String(fragrance.length-fk).padStart(3,'0')+' · '+fr.date;get('fragrance/'+fr.date+'.html').then(function(h){main.innerHTML=h;flagify();quickLook();fb();var pv=fragrance[fk+1],nx=fragrance[fk-1];main.insertAdjacentHTML('beforeend','<nav class="pager">'+(pv?'<a href="#'+pv.date+'-fragrance">← '+pv.date+'</a>':'<span></span>')+'<span>Weekly</span>'+(nx?'<a href="#'+nx.date+'-fragrance">'+nx.date+' →</a>':'<span></span>')+'</nav>')}).catch(function(){main.innerHTML='<p class="empty">이 호를 불러오지 못했어요. 새로고침해 주세요.</p>'});return}
@@ -614,15 +643,15 @@ a.thl:hover .th .art,a.thl:focus-visible .th .art{transform:translateY(-3px);tra
   var idx=s.date?issues.findIndex(function(i){return i.date===s.date}):0;if(idx<0)idx=0;var it=issues[idx];if(!it){main.innerHTML='<p class="empty">No issues yet.</p>';return}
   var d=new Date(it.date+'T00:00:00');document.getElementById('issueNo').textContent='Issue No. '+String(issues.length-idx).padStart(3,'0')+' · '+it.weekday+' '+it.date.slice(8)+' '+d.toLocaleString('en-US',{month:'short'})+' '+it.date.slice(0,4);
   setNav(s.tab,it.date);
-  get('issues/'+it.date+'.html').then(function(html){main.innerHTML=html;linkCovers();flagify();quickLook();addMarquee();flagify();
+  get('issues/'+it.date+'.html').then(function(html){main.innerHTML=html;linkCovers();flagify();quickLook();addMarquee();flagify();edInject(it.date);
    main.querySelectorAll('.panel').forEach(function(p){p.hidden=p.dataset.p!==s.tab});fb();
    var prev=issues[idx+1],next=issues[idx-1];
    main.insertAdjacentHTML('beforeend','<nav class="pager">'+(prev?'<a href="#'+prev.date+'-'+s.tab+'">← '+prev.date+'</a>':'<span></span>')+'<a href="#archive">All issues</a>'+(next?'<a href="#'+next.date+'-'+s.tab+'">'+next.date+' →</a>':'<span></span>')+'</nav>');
    var m=mom.filter(function(x){return x.date<=it.date})[0];var slot=main.querySelector('[data-p="stocks"] .mom-slot');
    if(m&&slot)get('momentum/'+m.date+'.html').then(function(h){slot.innerHTML=h;fb()}).catch(function(){});var ec=econ.filter(function(x){return x.date<=it.date})[0],es=main.querySelector('.econ-slot');if(ec&&es)get('econ/'+ec.date+'.html').then(function(h){es.outerHTML=h;flagify();quickLook();flagify();fb()}).catch(function(){});
   }).catch(function(){main.innerHTML='<p class="empty">이 호를 불러오지 못했어요. 새로고침해 주세요.</p>'})}
- Promise.all([fetch('issues/index.json',{cache:'no-cache'}).then(function(r){return r.json()}),fetch('momentum/index.json',{cache:'no-cache'}).then(function(r){return r.json()}).catch(function(){return[]}),fetch('econ/index.json',{cache:'no-cache'}).then(function(r){return r.json()}).catch(function(){return[]}),fetch('retail/index.json',{cache:'no-cache'}).then(function(r){return r.json()}).catch(function(){return[]}),fetch('fragrance/index.json',{cache:'no-cache'}).then(function(r){return r.json()}).catch(function(){return[]})])
- .then(function(r){issues=r[0].sort(function(a,b){return b.date.localeCompare(a.date)});mom=r[1].sort(function(a,b){return b.date.localeCompare(a.date)});econ=(r[2]||[]).sort(function(a,b){return b.date.localeCompare(a.date)});retail=(r[3]||[]).sort(function(a,b){return b.date.localeCompare(a.date)});fragrance=(r[4]||[]).sort(function(a,b){return b.date.localeCompare(a.date)});show()})
+ Promise.all([fetch('issues/index.json',{cache:'no-cache'}).then(function(r){return r.json()}),fetch('momentum/index.json',{cache:'no-cache'}).then(function(r){return r.json()}).catch(function(){return[]}),fetch('econ/index.json',{cache:'no-cache'}).then(function(r){return r.json()}).catch(function(){return[]}),fetch('retail/index.json',{cache:'no-cache'}).then(function(r){return r.json()}).catch(function(){return[]}),fetch('fragrance/index.json',{cache:'no-cache'}).then(function(r){return r.json()}).catch(function(){return[]}),fetch('editorial/index.json',{cache:'no-cache'}).then(function(r){return r.json()}).catch(function(){return[]})])
+ .then(function(r){issues=r[0].sort(function(a,b){return b.date.localeCompare(a.date)});mom=r[1].sort(function(a,b){return b.date.localeCompare(a.date)});econ=(r[2]||[]).sort(function(a,b){return b.date.localeCompare(a.date)});retail=(r[3]||[]).sort(function(a,b){return b.date.localeCompare(a.date)});fragrance=(r[4]||[]).sort(function(a,b){return b.date.localeCompare(a.date)});editorial=(r[5]||[]).sort(function(a,b){return b.date.localeCompare(a.date)});show()})
  .catch(function(){main.innerHTML='<p class="empty">목록을 불러오지 못했어요.</p>'});
  window.addEventListener('hashchange',function(){show();var t=document.querySelector('.tabs');window.scrollTo(0,Math.max(0,t.offsetTop-80))});
 })();
@@ -741,6 +770,7 @@ a.thl:hover .th .art,a.thl:focus-visible .th .art{transform:translateY(-3px);tra
  window.artify=function(){
   document.querySelectorAll('.th:not([data-artd])').forEach(function(th){th.dataset.artd='1';th.insertAdjacentHTML('afterbegin',svg(pickCover(th),'art'));
    if(!th.closest('.qkc'))th.insertAdjacentHTML('afterbegin','<span class="cv-top" aria-hidden="true">SEOEN Journal</span>')});
+  document.querySelectorAll('.ed-cover:not([data-artd])').forEach(function(c){c.dataset.artd='1';var t=TONE[c.dataset.tone];if(t)c.style.setProperty('--t',t);c.insertAdjacentHTML('afterbegin',svg(A[c.dataset.art]?c.dataset.art:'frame','art'))});
   document.querySelectorAll('.lk-art:not([data-artd])').forEach(function(f,i){f.dataset.artd='1';var t=TONE[f.dataset.tone];if(t)f.style.setProperty('--t',t);
    var h=svg(A[f.dataset.bottle]?f.dataset.bottle:'flacon','bt');var seen={};
    (f.dataset.notes||'').split(',').map(function(x){return x.trim()}).filter(Boolean).forEach(function(n){var k=noteKey(n);if(seen[k]||Object.keys(seen).length>=3)return;seen[k]=1;h+=svg(k,'nt')});
