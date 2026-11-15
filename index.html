@@ -3,6 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="theme-color" content="#141619">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="SEOEN">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SEOEN Journal · Daily Beauty Briefing</title>
 <meta name="description" content="K-뷰티, 웰니스 호텔, 스킨케어, 뷰티 마케팅 소식을 매일 아침 영어 요약과 한국어 번역으로 전하는 데일리 뷰티 브리핑.">
@@ -204,6 +211,7 @@ td:nth-child(2){font-family:var(--display);font-weight:700;white-space:nowrap}
 .iconbtn{font:inherit;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--fg);cursor:pointer;padding:0;flex:none}
 .iconbtn:hover{border-color:var(--accent)}
 .iconbtn svg{width:16px;height:16px}
+.iconbtn.spin svg{animation:rspin .8s linear infinite}@keyframes rspin{to{transform:rotate(360deg)}}
 .bar-r{display:flex;align-items:center;gap:10px;min-width:0}
 
 .ecard .body{padding:20px 22px}
@@ -502,7 +510,7 @@ a.thl:hover .th .art,a.thl:focus-visible .th .art{transform:translateY(-3px);tra
 <body>
 <div class="wrap">
 <header class="mast">
-  <div class="top"><span id="issueNo">Issue</span><span class="top-r"><span>Seoul 08:00 KST</span><button type="button" class="iconbtn" id="exitBtn" aria-label="Exit / 나가기" title="Exit / 나가기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg></button></span></div>
+  <div class="top"><span id="issueNo">Issue</span><span class="top-r"><span>Seoul 08:00 KST</span><button type="button" class="iconbtn" id="reloadBtn" aria-label="Refresh / 새로고침" title="Refresh / 새로고침"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.34-5.66"/><path d="M20 4v4.5h-4.5"/></svg></button><button type="button" class="iconbtn" id="exitBtn" aria-label="Exit / 나가기" title="Exit / 나가기"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg></button></span></div>
   <span class="brand">SEOEN Journal</span>
   <h1>Daily Beauty <span>Briefing</span></h1>
   <p><span class="l-en" lang="en">K-beauty · Wellness hotels · Skincare · Marketing — English summaries with translations</span><span class="l-ko" lang="ko">K-뷰티 · 웰니스 호텔 · 스킨케어 · 마케팅 — 영어 원문 요약과 한국어 해설</span><span class="l-fr" lang="fr">K-beauté · Hôtels bien-être · Soins · Marketing — résumés en anglais</span><span class="l-zh" lang="zh">韩妆 · 健康酒店 · 护肤 · 营销 — 英文摘要与译文</span><span class="l-ja" lang="ja">Kビューティー · ウェルネスホテル · スキンケア · マーケティング — 英語要約と翻訳</span></p>
@@ -682,6 +690,8 @@ a.thl:hover .th .art,a.thl:focus-visible .th .art{transform:translateY(-3px);tra
  var t=null;try{t=localStorage.getItem('dbb-theme')}catch(e){}
  ap(t||'dark',false);
  b.addEventListener('click',function(){var c=root.getAttribute('data-theme');ap({dark:'light',light:'pink',pink:'sky',sky:'dark'}[c]||'dark',true)});
+ (function(){try{var q=new URLSearchParams(location.search);if(q.has('r')){q.delete('r');var qs=q.toString();history.replaceState(null,'',location.pathname+(qs?'?'+qs:'')+location.hash)}}catch(e){}
+ document.getElementById('reloadBtn').addEventListener('click',function(){this.classList.add('spin');var q=new URLSearchParams(location.search);q.set('r',Date.now());location.replace(location.pathname+'?'+q.toString()+location.hash)})})();
  document.getElementById('exitBtn').addEventListener('click',function(){
   var h=location.hash.slice(1);
   if(h&&h!=='news'){location.hash='news';window.scrollTo(0,0);return}
