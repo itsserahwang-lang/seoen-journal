@@ -591,7 +591,7 @@ a.thl:hover .th .art,a.thl:focus-visible .th .art{transform:translateY(-3px);tra
    pn.querySelectorAll('.top3 .t').forEach(function(t){var h=t.querySelectorAll('h3');var pe=t.querySelector('p.en'),pk=t.querySelector('p.kot');
      add({el:t,n:txt(t.querySelector('.n')),kw:'',en:h[0]?txt(h[0]):txt(pe),ko:h[1]?txt(h[1]):txt(pk),m:''})});
    if(key==='stocks'){var tb=pn.querySelector('.tbl tbody');if(tb)tb.querySelectorAll('tr').forEach(function(r){var c=r.children;if(c.length<3)return;var ch=txt(c[2].querySelector('.l-en')||c[2]),cK=txt(c[2].querySelector('.l-ko')||c[2]);
-     add({el:r,kw:ch,kwko:cK,en:txt(c[0].querySelector('.l-en')||c[0])+' · '+txt(c[1].querySelector('.l-en')||c[1]),ko:txt(c[0].querySelector('.l-ko')||c[0])+' · '+txt(c[1].querySelector('.l-ko')||c[1]),m:txt(c[3].querySelector('.l-ko')||c[3])})})}
+     add({el:r,kw:ch,kwko:cK,en:txt(c[0].querySelector('.l-en')||c[0])+' · '+txt(c[1].querySelector('.l-en')||c[1]),ko:txt(c[0].querySelector('.l-ko')||c[0])+' · '+txt(c[1].querySelector('.l-ko')||c[1]),m:c[3]?txt(c[3].querySelector('.l-ko')||c[3]):''})})}
    if(key==='english'){pn.querySelectorAll('.card.w').forEach(function(w){add({el:w,kw:txt(w.querySelector('.term')),en:txt(w.querySelector('.ex')),ko:txt(w.querySelector('.kr')),m:txt(w.querySelector('.pos'))})})}
    if(key==='retail'){pn.querySelectorAll('.ch').forEach(function(c){var r=c.querySelector('.rk:not(.gap)');if(!r)return;var nm=txt(c.querySelector('.ch-h h3'));
      add({el:c,kw:nm,en:'#1 '+txt(r.querySelector('.br'))+' — '+txt(r.querySelector('h4')),ko:'1위 '+txt(r.querySelector('.br'))+' — '+txt(r.querySelector('h4')),m:txt(c.querySelector('.bs .l-ko'))})})}
