@@ -1,74 +1,80 @@
 [
- {
-  "date": "2026-11-22",
-  "weekday": "Sun",
-  "headline": "Beauty stocks hold up in a 'Black Friday' week",
-  "headline_ko": "AI 거품론 '검은 금요일'에도 화장품주 선방"
- },
- {
-  "date": "2026-11-21",
-  "weekday": "Sat",
-  "headline": "Korea passes $1 trillion in exports; cosmetics hit a record",
-  "headline_ko": "수출 1조 달러 달성…화장품 '사상 최대'로 힘 보태"
- },
- {
-  "date": "2026-11-20",
-  "weekday": "Fri",
-  "headline": "Korea–China FTA deal revives K-beauty's China hopes",
-  "headline_ko": "한중 FTA 2단계 타결…K뷰티 '중국 제2의 도약' 기대"
- },
- {
-  "date": "2026-11-19",
-  "weekday": "Thu",
-  "headline": "2027's consumer keyword is 'verification'",
-  "headline_ko": "2027 소비 키워드는 '검증'…AI가 고르고 소비자가 확정"
- },
- {
-  "date": "2026-11-18",
-  "weekday": "Wed",
-  "headline": "Cosmax becomes the first ODM to make 100 million units a month",
-  "headline_ko": "코스맥스, ODM 최초 '월 1억 개' 생산"
- },
- {
-  "date": "2026-11-17",
-  "weekday": "Tue",
-  "headline": "Q3 scorecard: capacity and margins split the winners",
-  "headline_ko": "3분기 화장품 성적표, 생산역량·수익성이 갈랐다"
- },
- {
-  "date": "2026-11-16",
-  "weekday": "Mon",
-  "headline": "Global retailers turn to Korean makers for private labels",
-  "headline_ko": "글로벌 유통·제약사, 한국 제조사에 PB 화장품 맡긴다"
- },
- {
-  "date": "2026-11-15",
-  "weekday": "Sun",
-  "headline": "Analysts see cosmetics outgrowing apparel in 2027",
-  "headline_ko": "증권가 \"2027년 화장품 성장률, 의류 압도\""
- },
- {
-  "date": "2026-11-14",
-  "weekday": "Sat",
-  "headline": "Shilla Stay sells K-beauty as a hotel package",
-  "headline_ko": "신라스테이, K-뷰티를 '호텔 패키지'로 판다"
- },
- {
-  "date": "2026-11-13",
-  "weekday": "Fri",
-  "headline": "Nordic retailer Lyko scouts 13 Korean indie brands, plans a K-beauty lab",
-  "headline_ko": "북유럽 최대 뷰티 유통 '리코', K-인디 13곳 입점 추진…매장에 K-뷰티 랩"
- },
- {
-  "date": "2026-11-12",
-  "weekday": "Thu",
-  "headline": "Cosmoprof Asia opens in Hong Kong with an 87-company Korea pavilion",
-  "headline_ko": "코스모프로프 아시아 홍콩 개막…한국관 87개사 참가"
- },
- {
-  "date": "2026-11-11",
-  "weekday": "Wed",
-  "headline": "Olive Young doubles down on brick-and-mortar in California",
-  "headline_ko": "올리브영, 캘리포니아 오프라인 매장 확대"
- }
+  {
+    "date": "2026-11-23",
+    "weekday": "Mon",
+    "headline": "K-beauty research advances from ingredients to published evidence",
+    "headline_ko": "K뷰티 기술력, 성분 이야기에서 국제학술지 연구로"
+  },
+  {
+    "date": "2026-11-22",
+    "weekday": "Sun",
+    "headline": "Beauty stocks hold up in a 'Black Friday' week",
+    "headline_ko": "AI 거품론 '검은 금요일'에도 화장품주 선방"
+  },
+  {
+    "date": "2026-11-21",
+    "weekday": "Sat",
+    "headline": "Korea passes $1 trillion in exports; cosmetics hit a record",
+    "headline_ko": "수출 1조 달러 달성…화장품 '사상 최대'로 힘 보태"
+  },
+  {
+    "date": "2026-11-20",
+    "weekday": "Fri",
+    "headline": "Korea–China FTA deal revives K-beauty's China hopes",
+    "headline_ko": "한중 FTA 2단계 타결…K뷰티 '중국 제2의 도약' 기대"
+  },
+  {
+    "date": "2026-11-19",
+    "weekday": "Thu",
+    "headline": "2027's consumer keyword is 'verification'",
+    "headline_ko": "2027 소비 키워드는 '검증'…AI가 고르고 소비자가 확정"
+  },
+  {
+    "date": "2026-11-18",
+    "weekday": "Wed",
+    "headline": "Cosmax becomes the first ODM to make 100 million units a month",
+    "headline_ko": "코스맥스, ODM 최초 '월 1억 개' 생산"
+  },
+  {
+    "date": "2026-11-17",
+    "weekday": "Tue",
+    "headline": "Q3 scorecard: capacity and margins split the winners",
+    "headline_ko": "3분기 화장품 성적표, 생산역량·수익성이 갈랐다"
+  },
+  {
+    "date": "2026-11-16",
+    "weekday": "Mon",
+    "headline": "Global retailers turn to Korean makers for private labels",
+    "headline_ko": "글로벌 유통·제약사, 한국 제조사에 PB 화장품 맡긴다"
+  },
+  {
+    "date": "2026-11-15",
+    "weekday": "Sun",
+    "headline": "Analysts see cosmetics outgrowing apparel in 2027",
+    "headline_ko": "증권가 \"2027년 화장품 성장률, 의류 압도\""
+  },
+  {
+    "date": "2026-11-14",
+    "weekday": "Sat",
+    "headline": "Shilla Stay sells K-beauty as a hotel package",
+    "headline_ko": "신라스테이, K-뷰티를 '호텔 패키지'로 판다"
+  },
+  {
+    "date": "2026-11-13",
+    "weekday": "Fri",
+    "headline": "Nordic retailer Lyko scouts 13 Korean indie brands, plans a K-beauty lab",
+    "headline_ko": "북유럽 최대 뷰티 유통 '리코', K-인디 13곳 입점 추진…매장에 K-뷰티 랩"
+  },
+  {
+    "date": "2026-11-12",
+    "weekday": "Thu",
+    "headline": "Cosmoprof Asia opens in Hong Kong with an 87-company Korea pavilion",
+    "headline_ko": "코스모프로프 아시아 홍콩 개막…한국관 87개사 참가"
+  },
+  {
+    "date": "2026-11-11",
+    "weekday": "Wed",
+    "headline": "Olive Young doubles down on brick-and-mortar in California",
+    "headline_ko": "올리브영, 캘리포니아 오프라인 매장 확대"
+  }
 ]
