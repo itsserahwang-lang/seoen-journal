@@ -30,6 +30,13 @@
 .jeong-statement p{max-width:750px;margin:0 auto 28px;line-height:2;color:#554b46;font-size:14px}
 .jeong-values{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;font-size:11px;text-transform:uppercase;letter-spacing:.14em}
 .jeong-values span{border-top:1px solid rgba(40,30,30,.45);padding-top:12px}
+
+/* Edited SEOEN HOUSE Seoul tea-salon photography */
+.hero-art.salon-photo{background:radial-gradient(ellipse at 47% 32%,#f7eae3 0%,#e5c4c6 58%,#cda7a1 100%);padding:42px 5% 65px}
+.hero-art.salon-photo:before{width:75%;height:84%;top:7%;left:12%;transform:none;border:1px solid rgba(255,255,255,.75)}
+.hero-art.salon-photo img{display:block;position:relative;z-index:1;width:min(68%,350px);height:auto;aspect-ratio:4/5;object-fit:cover;box-shadow:0 28px 65px rgba(83,49,49,.24);border:7px solid rgba(251,245,238,.8)}
+.hero-art.salon-photo .art-mark{z-index:2;bottom:5%;right:6%;font-size:clamp(13px,1.4vw,20px);color:#513c3b}
+@media(max-width:650px){.hero-art.salon-photo{padding:30px 3% 52px;min-height:390px}.hero-art.salon-photo img{width:min(68%,300px)}.hero-art.salon-photo .art-mark{right:5%;bottom:4%}}
 </style>
 </head>
 <body>
@@ -50,9 +57,9 @@
           <p class="lead-en">Rooted in Korea. Reimagined in Seoul. Shared with the world.<br>A new K-beauty &amp; wellness culture, shaped by warmth, confidence, and conscious choice.</p>
           <a class="arrow-link" href="#story"><span>Enter the House</span><span aria-hidden="true">↗</span></a>
         </div>
-        <div class="hero-art" role="img" aria-label="로즈빛 하우스 아치와 황금빛 햇살을 추상화한 SEOEN HOUSE 아트워크">
-          <svg viewBox="0 0 520 600" aria-hidden="true"><defs><linearGradient id="walls" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f9ede7"/><stop offset="1" stop-color="#a87978"/></linearGradient><linearGradient id="light" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff6d8"/><stop offset="1" stop-color="#d3a098"/></linearGradient></defs><path d="M50 550V245a210 210 0 0 1 420 0v305" fill="url(#walls)" stroke="#f5e5e1" stroke-width="2"/><path d="M104 548V253a156 156 0 0 1 312 0v295" fill="#d5adb1" stroke="#eed9d6" stroke-width="2"/><path d="M136 549V258a124 124 0 0 1 248 0v291" fill="#9c7075"/><circle cx="260" cy="290" r="105" fill="url(#light)"/><path d="M136 460h248v89H136z" fill="#cf9ea0"/><path d="M0 551h520" stroke="#f9ece4" stroke-width="4"/><path d="M260 186v362M138 344h244" stroke="#fff8ee" stroke-opacity=".38"/><text x="260" y="516" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="28" fill="#fff8ee">everyday holiday</text></svg>
-          <span class="art-mark">Seoul, beautifully lived.</span>
+        <div class="hero-art salon-photo">
+          <img src="./assets/salon.webp" width="280" height="350" fetchpriority="high" alt="현대 한옥을 재해석한 서울의 따뜻한 티 살롱에서 사람들이 차를 나누는 SEOEN HOUSE 콘셉트 이미지. 여성 의상은 현대적인 아이보리·블러시 핑크 스타일.">
+          <span class="art-mark">Jeong (情) · The art of togetherness.</span>
         </div>
       </section>
       <div class="ticker" aria-label="서엔 하우스의 가치"><span>Jeong · 情</span><span>Confidence</span><span>Contemporary Korea</span><span>Conscious Living</span></div>
