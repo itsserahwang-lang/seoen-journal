@@ -38,11 +38,21 @@
 .hero-art.salon-photo .art-mark{z-index:2;bottom:5%;right:6%;font-size:clamp(13px,1.4vw,20px);color:#513c3b}
 @media(max-width:650px){.hero-art.salon-photo{padding:30px 3% 52px;min-height:390px}.hero-art.salon-photo img{width:min(68%,300px)}.hero-art.salon-photo .art-mark{right:5%;bottom:4%}}
 </style>
+<style>
+.seoen-sites{display:flex;justify-content:center;gap:clamp(16px,4vw,38px);padding:10px 14px;background:#292522;color:#f8f4f0;font-size:12px}
+.seoen-sites a{color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:6px;min-height:28px}
+.seoen-sites a span{font-size:10px;letter-spacing:.08em}
+.seoen-sites a[aria-current="page"],.seoen-sites a:hover{text-decoration:underline;text-underline-offset:5px}
+.seoen-sites a:focus-visible{outline:2px solid #f8f4f0;outline-offset:4px}
+</style>
 </head>
 <body>
   <a class="skip" href="#main">본문으로 이동</a>
   <div class="shell">
-    <div class="topbar"><span>SEOEN HOUSE · AN EVOLVING BRAND WORLD</span><a href="../index.html#news">GO TO THE JOURNAL ↗</a></div>
+    <nav class="seoen-sites" aria-label="서엔 사이트 이동">
+  <a href="./" aria-current="page">서엔 하우스 <span lang="en">House</span></a>
+  <a href="../index.html#news">서엔 저널 <span lang="en">Journal</span></a>
+</nav>
     <header class="nav">
       <a class="wordmark" href="./" aria-label="SEOEN HOUSE 홈">SEOÉN<small>HOUSE</small></a>
       <nav class="navlinks" aria-label="서엔 하우스 메뉴">
@@ -110,7 +120,7 @@
         </div><div class="visit-art" aria-hidden="true"><div class="outline"></div></div>
       </section>
     </main>
-    <footer class="footer"><div class="foot-top"><div><div class="logo">SEOÉN HOUSE</div><div style="font-size:11px;letter-spacing:.2em;margin-top:12px">EVERYDAY HOLIDAY</div></div><a href="../index.html#seoen">SEOEN Journal · Brand Archive ↗</a></div>
+    <footer class="footer"><div class="foot-top"><div><div class="logo">SEOÉN HOUSE</div><div style="font-size:11px;letter-spacing:.2em;margin-top:12px">EVERYDAY HOLIDAY</div></div><a href="../index.html#archive">서엔 저널 지난 호 · Journal Archive ↗</a></div>
       <div class="foot-bottom"><span>© 2026 SEOEN HOUSE SEOUL · CONCEPT WEBSITE</span><span>브랜드 기획·개발 단계 · 상품 판매 및 호텔 예약 서비스 없음</span></div></footer>
   </div>
 </body>
