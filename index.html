@@ -522,6 +522,18 @@ a.thl:hover .th .art,a.thl:focus-visible .th .art{transform:translateY(-3px);tra
 .seoen-sites a[aria-current="page"],.seoen-sites a:hover{text-decoration:underline;text-underline-offset:5px}
 .seoen-sites a:focus-visible{outline:2px solid #f8f4f0;outline-offset:4px}
 </style>
+
+<style>
+.pronunciations{display:inline-flex;flex-wrap:wrap;gap:5px;margin-inline-start:8px;vertical-align:middle}
+.pronunciations button,.english-archive button{min-height:36px;padding:4px 9px;border:1px solid var(--line,#888);border-radius:5px;background:transparent;color:inherit;cursor:pointer;font:inherit;font-size:11px}
+.pronunciations button:hover,.english-archive button:hover{border-color:currentColor}
+.pronunciations button:focus-visible,.english-archive button:focus-visible,.english-archive a:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+.pronunciations svg{width:13px;height:13px;vertical-align:middle;margin-inline-end:4px}
+.english-archive summary{cursor:pointer}
+.english-archive ul{display:flex;flex-wrap:wrap;gap:12px 18px;padding:0;list-style:none}
+.english-archive a{text-decoration:underline;text-underline-offset:3px}
+.english-status:empty{display:none}
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -660,6 +672,127 @@ a.thl:hover .th .art,a.thl:focus-visible .th .art{transform:translateY(-3px);tra
   var a=document.createElement('a');a.className='thl';a.href=rd.href;a.target='_blank';a.rel='noopener';var t=(c.querySelector('h3')||{}).textContent||'';a.setAttribute('aria-label','Open article / 원문 기사 보기: '+t);
   th.parentNode.insertBefore(a,th);a.appendChild(th);a.insertAdjacentHTML('beforeend','<span class="go" aria-hidden="true">↗</span>')})}
  function edInject(date){var pn=main.querySelector('.panel[data-p="mag"]');if(!pn||!editorial.length||pn.querySelector('.ed-wrap'))return;var pick=editorial.filter(function(x){return x.date<=date})[0]||editorial[editorial.length-1];var nav=editorial.slice(0,12).map(function(x){return '<button type="button" data-d="'+x.date+'" aria-pressed="'+(x===pick)+'">'+esc(x.label||x.date.slice(0,7))+'</button>'}).join('');pn.insertAdjacentHTML('afterbegin','<div class="ed-wrap"><div class="ed-slot"></div>'+(editorial.length>1?'<nav class="ed-past" aria-label="Past editions / 지난 호">'+nav+'</nav>':'')+'</div>');var w=pn.firstElementChild,slot=w.querySelector('.ed-slot');function load(d){get('editorial/'+d+'.html').then(function(h){slot.innerHTML=h;flagify();fb()}).catch(function(){slot.innerHTML='<p class="empty">Editorial을 불러오지 못했어요.</p>'})}load(pick.date);w.querySelectorAll('.ed-past button').forEach(function(b){b.addEventListener('click',function(){w.querySelectorAll('.ed-past button').forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});load(b.dataset.d)})})}
+
+ function englishText(root, selector){
+  var element=root.querySelector(selector);
+  return element ? element.textContent.trim() : '';
+ }
+ function englishVocabulary(html,date){
+  var doc=new DOMParser().parseFromString(html,'text/html');
+  return Array.from(doc.querySelectorAll('[data-p="english"] .words .w')).map(function(card){
+   return {date:date,expression:englishText(card,'.term'),partOfSpeech:englishText(card,'.pos'),
+    meaning:englishText(card,'.kr'),example:englishText(card,'.ex')};
+  }).filter(function(entry){return entry.expression});
+ }
+ function setupEnglish(currentDate){
+  var panel=main.querySelector('[data-p="english"]');
+  if(!panel)return;
+  var status=document.createElement('p');
+  status.className='english-status';
+  status.setAttribute('role','status');
+  panel.querySelector('.words')?.after(status);
+  if(!status.isConnected)panel.prepend(status);
+
+  var accents=[
+   {code:'US',locale:'en-US',name:'미국식'},
+   {code:'UK',locale:'en-GB',name:'영국식'}
+  ];
+  var speaker='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4zM16 9a4 4 0 0 1 0 6m2-8a7 7 0 0 1 0 10"/></svg>';
+  var synth=window.speechSynthesis;
+  var activeSpeech;
+  if(synth)synth.getVoices();
+
+  panel.querySelectorAll('.words .term').forEach(function(term){
+   var expression=term.textContent.trim();
+   var controls=document.createElement('span');
+   controls.className='pronunciations';
+   accents.forEach(function(accent){
+    var button=document.createElement('button');
+    button.type='button';
+    button.innerHTML=speaker+accent.code;
+    button.setAttribute('aria-label',expression+' '+accent.name+' 발음 듣기');
+    button.title=accent.name+' 발음';
+    button.addEventListener('click',function(){
+     if(!synth || !window.SpeechSynthesisUtterance){
+      status.textContent='이 브라우저에서는 발음 재생을 지원하지 않습니다.';
+      return;
+     }
+     var voices=synth.getVoices();
+     var voice=voices.find(function(item){
+      return item.lang.toLowerCase().replace(/_/g,'-')===accent.locale.toLowerCase();
+     });
+     if(voices.length && !voice){
+      status.textContent='이 기기에는 '+accent.name+' 영어 음성이 없습니다.';
+      return;
+     }
+     var speech=new SpeechSynthesisUtterance(expression);
+     speech.lang=accent.locale;
+     if(voice)speech.voice=voice;
+     activeSpeech=speech;
+     synth.cancel();
+     status.textContent='';
+     speech.onerror=function(event){
+      if(activeSpeech===speech && event.error!=='interrupted' && event.error!=='canceled'){
+       status.textContent=accent.name+' 발음을 재생하지 못했습니다.';
+      }
+     };
+     synth.speak(speech);
+    });
+    controls.appendChild(button);
+   });
+   term.after(controls);
+  });
+
+  var archiveBox=document.createElement('details');
+  archiveBox.className='english-archive';
+  archiveBox.innerHTML='<summary>영어 표현 아카이브 · Vocabulary Archive</summary><ul></ul>';
+  var dates=archiveBox.querySelector('ul');
+  issues.forEach(function(issue){
+   var item=document.createElement('li');
+   var link=document.createElement('a');
+   link.href='#'+issue.date+'-english';
+   link.textContent=issue.date;
+   if(issue.date===currentDate)link.setAttribute('aria-current','date');
+   item.appendChild(link);
+   dates.appendChild(item);
+  });
+
+  var download=document.createElement('button');
+  download.type='button';
+  download.textContent='전체 영어 표현 JSON 다운로드';
+  var exportStatus=document.createElement('p');
+  exportStatus.className='english-status';
+  exportStatus.setAttribute('role','status');
+  download.addEventListener('click',async function(){
+   download.disabled=true;
+   exportStatus.textContent='표현을 모으는 중입니다.';
+   try{
+    var entries=[];
+    for(var start=0;start<issues.length;start+=8){
+     var batch=await Promise.all(issues.slice(start,start+8).map(async function(issue){
+      var html=await get('issues/'+issue.date+'.html');
+      return englishVocabulary(html,issue.date);
+     }));
+     entries=entries.concat(...batch);
+    }
+    var data=new Blob([JSON.stringify(entries,null,2)+'\n'],{type:'application/json'});
+    var url=URL.createObjectURL(data);
+    var file=document.createElement('a');
+    file.href=url;
+    file.download='seoen-english-vocabulary.json';
+    file.click();
+    setTimeout(function(){URL.revokeObjectURL(url)},10000);
+    exportStatus.textContent=entries.length+'개 표현을 모았습니다.';
+   }catch(error){
+    exportStatus.textContent='일부 호를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.';
+   }finally{
+    download.disabled=false;
+   }
+  });
+  archiveBox.append(download,exportStatus);
+  panel.firstElementChild.after(archiveBox);
+ }
+
  function show(){var s=parse();if(s.archive)return archive();
   if(s.tab==='seoen'&&!s.date){document.getElementById('issueNo').textContent='SEOEN · Brand';setNav('seoen');main.innerHTML=document.getElementById('tpl-seoen').innerHTML;fb();return}
   if(s.tab==='fragrance'){setNav('fragrance');var fk=s.date?fragrance.findIndex(function(x){return x.date===s.date}):0;if(fk<0)fk=0;var fr=fragrance[fk];if(!fr){document.getElementById('issueNo').textContent='Fragrance · Lookbook';main.innerHTML='<div class="panel" data-p="fragrance"><section class="fragrance"><div class="fr-soon">'+window.fragranceSoon()+'<span class="fr-kick">Fragrance Lookbook</span><p class="fr-dek"><span class="l-en">The first weekly lookbook arrives on Saturday morning.</span><span class="l-ko">첫 주간 룩북은 토요일 오전에 발행돼요.</span></p></div></section></div>';fb();return}document.getElementById('issueNo').textContent='Fragrance · Vol. '+String(fragrance.length-fk).padStart(3,'0')+' · '+fr.date;get('fragrance/'+fr.date+'.html').then(function(h){main.innerHTML=h;flagify();quickLook();fb();var pv=fragrance[fk+1],nx=fragrance[fk-1];main.insertAdjacentHTML('beforeend','<nav class="pager">'+(pv?'<a href="#'+pv.date+'-fragrance">← '+pv.date+'</a>':'<span></span>')+'<span>Weekly</span>'+(nx?'<a href="#'+nx.date+'-fragrance">'+nx.date+' →</a>':'<span></span>')+'</nav>')}).catch(function(){main.innerHTML='<p class="empty">이 호를 불러오지 못했어요. 새로고침해 주세요.</p>'});return}
@@ -673,6 +806,7 @@ a.thl:hover .th .art,a.thl:focus-visible .th .art{transform:translateY(-3px);tra
   var d=new Date(it.date+'T00:00:00');document.getElementById('issueNo').textContent='Issue No. '+String(issues.length-idx).padStart(3,'0')+' · '+it.weekday+' '+it.date.slice(8)+' '+d.toLocaleString('en-US',{month:'short'})+' '+it.date.slice(0,4);
   setNav(s.tab,it.date);
   get('issues/'+it.date+'.html').then(function(html){main.innerHTML=html;linkCovers();flagify();quickLook();addMarquee();flagify();edInject(it.date);
+   if(s.tab==='english')setupEnglish(it.date);
    main.querySelectorAll('.panel').forEach(function(p){p.hidden=p.dataset.p!==s.tab});fb();
    var prev=issues[idx+1],next=issues[idx-1];
    main.insertAdjacentHTML('beforeend','<nav class="pager">'+(prev?'<a href="#'+prev.date+'-'+s.tab+'">← '+prev.date+'</a>':'<span></span>')+'<a href="#archive">All issues</a>'+(next?'<a href="#'+next.date+'-'+s.tab+'">'+next.date+' →</a>':'<span></span>')+'</nav>');
